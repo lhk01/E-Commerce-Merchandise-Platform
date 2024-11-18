@@ -121,9 +121,9 @@ We are a team of passionate developers who collaborated on this Capstone Project
 
 | Name             | GitHub Profile                       |
 |------------------|--------------------------------------|
-| **Leong Hoong Kai** | [@lhk01](https://github.com/lhk01) |
-| **Chew Zhi Boon**      | [@Rey-3](https://github.com/Rey-3) |
-| **Goay Wei Jun**    | [@Blackmanchoco](https://github.com/Blackmanchoco) |
+| (https://avatars.githubusercontent.com/u/173076532?v=4&size=64) **Leong Hoong Kai** | [@lhk01](https://github.com/lhk01) |
+| (https://avatars.githubusercontent.com/u/61781041?s=96&v=4) **Chew Zhi Boon**      | [@Rey-3](https://github.com/Rey-3) |
+| (https://avatars.githubusercontent.com/u/169897960?s=96&v=4) **Goay Wei Jun**    | [@Blackmanchoco](https://github.com/Blackmanchoco) |
 
 ---
 
