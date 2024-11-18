@@ -8,7 +8,7 @@ Whether you're a gamer searching for premium merchandise or a developer curious 
 
 ---
 
-## 🛠️ Features  
+## 🛠️ Features 
 
 ### User-Centric Features  
 - **User Authentication**: Secure login and registration system with reCAPTCHA to prevent bots.  
