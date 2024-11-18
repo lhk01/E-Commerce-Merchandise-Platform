@@ -115,6 +115,18 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
+## 👥 Contributors  
+
+We are a team of passionate developers who collaborated on this Capstone Project:  
+
+| Name             | GitHub Profile                       |
+|------------------|--------------------------------------|
+| **Leong Hoong Kai** | [@lhk01](https://github.com/lhk01) |
+| **Chew Zhi Boon**      | [@Rey-3](https://github.com/Rey-3) |
+| **Goay Wei Jun**    | [@Blackmanchoco](https://github.com/Blackmanchoco) |
+
+---
+
 ## 🌟 Acknowledgments  
 
 Special thanks to the developers and contributors of open-source libraries, especially PHPMailer, for making this project possible!  
