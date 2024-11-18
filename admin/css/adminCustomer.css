@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+}
+
+
+.main-content {
+    padding: 20px;
+    padding-top: 160px;
+}
+
+.customer-list {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.customer-list h2 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f9f9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.delete-btn {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    padding: 5%;
+}
+
+.delete-btn:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    table thead {
+        display: none; /* Hide table headers */
+    }
+
+    table, table tbody, table tr, table td {
+        display: block;
+        width: 100%;
+    }
+
+    table tr {
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+    }
+
+    table td {
+        padding: 15px; /* Increase padding for readability */
+        position: relative;
+        text-align: left;
+        line-height: 1.6;
+        border: none; /* Remove borders for a cleaner look on mobile */
+        background-color: #fff;
+    }
+
+    /* Display the `data-title` attribute content as a label before each cell’s content */
+    table td::before {
+        content: attr(data-title) ": ";
+        font-weight: bold;
+        color: #333;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        width: 40%; /* Adjust width to control space for the label */
+        display: inline-block; /* Ensures the label takes its own space */
+    }
+
+    /* Adjusts content alignment with added space */
+    table td {
+        padding-left: 30%; /* Space for label and gap between label and content */
+        width: 60%;
+        font-size: 15px;
+        
+    }
+}

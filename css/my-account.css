@@ -1,0 +1,449 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(0, 0, 0);
+}
+
+
+header{
+  background-color: rgb(11, 11, 11);
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+.account-dropdown li a {
+    display: block;
+    padding: 5px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.account, .cart {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.account-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #2b2b2b;
+    right: 40px;
+    top: 65px;
+    list-style-type: none;
+    padding: 10px;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.shopping-icon {
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.mobile-shopping-icon{
+  font-size: 22px;
+  color: rgb(255, 255, 255);
+  transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.hamburger-menu,.search-icon{
+  color: white;
+}
+
+.account-dropdown li a:hover {
+    background-color: rgb(53, 53, 53);
+}
+.search-box {
+    border: 1px solid rgb(255, 255, 255) !important;
+    padding: 10px !important;
+    width: 230px !important;
+    border-radius: 4px !important;
+}
+
+.acontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 140px;
+}
+
+.account-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; 
+  gap: 30px;
+}
+
+.account-left-side {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  flex-direction: column;
+  height: 100%; /* Added this line */
+  margin-top: 30px;
+}
+
+.account-left-side h1{
+  margin-bottom: 30px;
+  margin-left: 15px;
+  color: rgb(255, 255, 255);
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  margin-bottom: 15px; 
+  padding: 20px 20px;
+}
+
+
+
+.icon img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  margin-right: 20px; 
+}
+
+.icon p {
+  font-size: 16px;
+  line-height: 30px;
+  white-space: nowrap; 
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  color: rgb(255, 255, 255);
+}
+
+.icon p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.account-right-side {
+  width: 70%;
+  padding: 20px;
+  background-color: #000000;
+}
+
+.account-right-side .content {
+  width: 700px;
+  height: 600px;
+  display: none;
+  background-color: rgb(29, 29, 29);
+  padding: 50px 20px;
+}
+
+.account-right-side .content.active {
+  display: block;
+  font-size: 18px;
+  color: #555;
+}
+
+.my-account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+  
+
+.my-account img{
+  height: 140px;
+  width: 140px;
+  border-radius: 100%;
+  margin-left: 30px;
+  object-fit: cover;
+}
+
+.account-details{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.account-details label {
+  align-self: flex-start; 
+  margin-top: 40px;
+  margin-bottom: 15px; 
+}
+
+.account-details input {
+    padding: 15px 20px;
+    border: none; 
+    background-color: #2b2b2b; 
+    color: #fff;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.account-details input:focus {
+    outline: none; 
+    border: 2px solid #fff; 
+    background-color: rgb(29, 29, 29);
+    color: #fff;
+}
+
+
+.account-details span{
+  margin-right: 30px;
+}
+
+.account-details button,
+.information button,
+.password-container button{
+  padding: 15px 20px;
+  border: none;
+  color: white;
+  background-color: rgb(211, 44, 44);
+  border-radius: 10px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.account-details button:hover,
+.information button:hover,
+.password-container button:hover{
+ background-color: rgb(201, 29, 29);
+}
+
+.information button{
+  margin-left: 260px;
+}
+
+.information input{
+  padding: 25px 20px;
+    border: none; 
+    background-color: #2b2b2b; 
+    color: #fff;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.information input:focus {
+    outline: none; 
+    border: 2px solid #fff; 
+    background-color: rgb(29, 29, 29);
+    color: #fff;
+}
+
+.information label{
+  color: white;
+}
+
+.information select{
+  height: 70px;
+  width: 150px;
+  border: none; 
+  background-color: #2b2b2b; 
+  color: #fff;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.information{
+  padding-left: 30px;
+}
+
+.password-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-self: flex-start; 
+  
+}
+
+.password-container label,
+.account-delete label{
+  margin-top: 40px;
+  margin-bottom: 15px; 
+  color: white;
+}
+
+.password-container input,
+.account-delete input{
+  padding: 25px 60px;
+    border: none; 
+    background-color: #2b2b2b; 
+    color: #fff;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.password-container input:focus,
+.account-delete input:focus{
+  outline: none; 
+    border: 2px solid #fff; 
+    background-color: rgb(29, 29, 29);
+    color: #fff;
+}
+
+
+.account-delete{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+}
+
+.account-delete label,
+.account-delete p{
+  color: white;
+  margin-top: 20px;
+}
+
+.account-delete p{
+  margin-bottom: 50px;
+}
+
+.account-delete p{
+  width: 500px;
+
+}
+
+.account-delete button{
+  margin-top: 60px;
+  padding: 30px 40px;
+  background-color: rgb(211, 44, 44);
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.account-delete button:hover{
+ background-color: rgb(181, 32, 32);
+}
+
+.message{
+  margin-top: 20px;
+}
+
+
+footer{
+  display: none;
+}
+
+/* Media Query for Mobile Phones (Max width: 468px) */
+@media (max-width: 468px) {
+  .account-container {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center;
+  }
+
+  .account-left-side {
+    display: flex; /* Arrange icons in a row */
+    flex-direction: row; /* Horizontal alignment */
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between icons */
+    margin-left: 90px;
+  }
+
+  .account-left-side h1{
+    display: none;
+  }
+
+  .icon {
+    flex-direction: column; /* Center-align the icons */
+    padding: 10px;
+  }
+
+  .icon p {
+    display: none; /* Hide text under icons */
+  }
+
+  .icon img {
+    width: 40px; /* Icon size for smaller screens */
+    height: 40px;
+  }
+
+  .account-right-side  {
+    width: 100%;
+    max-width: 500px; /* Equal width for all sections */
+    height: 300px; /* Equal height for all sections */
+    padding: 15px; /* Adjust padding for compact view */
+    margin: 0 auto; /* Center align the sections */
+  }
+
+  .my-account img {
+    width: 80px; 
+    height: 80px;
+    margin-left: 60px;
+  }
+
+  .content{
+    width: 100%;
+    max-width: 500px; 
+    height: 300px; 
+    padding: 15px; 
+    margin-right: 200px;
+  }
+
+  .account-details input {
+    width: 100%; /* Full-width input */
+    font-size: 14px; /* Smaller text size */
+    padding: 18px 20px; /* Compact padding */
+  }
+
+  .account-details button {
+    width: 100%; /* Full-width button */
+    font-size: 14px; /* Smaller font size */
+    padding: 10px 15px; /* Compact padding */
+  }
+
+  .password-container input {
+    width: 80%; /* Full-width input */
+    font-size: 14px; /* Smaller text size */
+    padding: 20px 15px; /* Compact padding */
+  }
+
+  .account-delete input {
+    width: 80%; /* Full-width input */
+    font-size: 14px; /* Smaller text size */
+    padding: 20px 15px; /* Compact padding */
+  }
+
+  .account-delete label{
+    font-size: 18px;
+  }
+
+  .account-delete button {
+    width: 30%; /* Full-width button */
+    font-size: 14px; /* Smaller font size */
+    padding: 20px 15px; /* Compact padding */
+  }
+
+  .account-delete p {
+    font-size: 16px; /* Adjust text size */
+    text-align: center; /* Center the text */
+    width: 400px;
+  }
+
+
+
+
+
+
+}
+
+
+
+
+
+

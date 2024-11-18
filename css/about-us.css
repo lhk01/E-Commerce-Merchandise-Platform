@@ -1,0 +1,399 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 100px;
+}
+
+.picture-header{
+  width: 100%;
+}
+
+.introduce-container{
+  margin-top: 50px;
+  width: 1200px;
+  margin-left: 30px;
+}
+
+.introduce-container h4{
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.introduce-container p{
+  font-size: 18px;
+  margin-top: 25px;
+  color: grey;
+}
+
+.middleHeader{
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.middleHeader h1{
+  font-size: 24px;
+}
+
+.li {
+  display: block;
+  margin-top: 20px;
+  height: 8px;
+  width: 120px;
+  margin-left: 80px;
+  background-color: red;
+}
+
+.element,
+.element-2{
+  display: flex;
+  justify-content: flex-start;
+  
+  margin-top: 120px;
+}
+
+.element img,
+.element-2 img{
+  width: 550px;
+  height: 460px;
+  object-fit: contain;
+  
+}
+
+.content{
+  margin-left: 100px;
+  width: 500px;
+  margin-top: 100px;
+}
+
+.content h1{
+  font-size: 22px;
+}
+
+.content p{
+  margin-top: 30px;
+  color: grey;
+}
+
+.content-2{
+  margin-right: 100px;
+  width: 500px;
+  margin-top: 100px;
+}
+
+.content-2 h1{
+  font-size: 22px;
+}
+
+.content-2 p{
+  margin-top: 30px;
+  color: grey;
+}
+
+.thank-container {
+  margin-top: 120px;
+  background-color: rgb(243, 242, 242);
+  width: 100%;
+}
+
+.thank-content {
+  padding: 40px; /* Optional, for better spacing inside */
+}
+
+.thank-content h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+.thank-content p {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 100%; /* Adjust to full width of the container */
+  text-align: center; /* Keeps the text centered */
+}
+
+
+
+/* For tablets and small laptops (max-width: 768px) */
+@media (max-width: 768px) {
+  .container {
+    width: 100%; /* Make the container full width */
+    padding-top: 30px;
+  }
+
+  .introduce-container {
+    width: 90%; /* Adjust width for smaller screens */
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .introduce-container h4,
+  .middleHeader h1,
+  .content h1,
+  .content-2 h1,
+  .thank-content h1 {
+    font-size: 20px;
+    margin: 0; /* Reset margin */
+  }
+
+  .introduce-container p,
+  .content p,
+  .content-2 p,
+  .thank-content p {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+
+  .element,
+  .element-2 {
+    flex-direction: column; /* Stack content vertically */
+    margin-top: 50px;
+    align-items: center; /* Center the content */
+  }
+
+  .element img,
+  .element-2 img {
+    width: 100%;
+    height: auto; /* Adjust image size */
+  }
+
+  .content,
+  .content-2 {
+    margin: 0;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .thank-container {
+    margin-top: 60px;
+  }
+
+  .thank-content {
+    width: 90%;
+    text-align: center;
+  }
+
+  .li {
+    margin-left: 0;
+    width: 80px;
+  }
+}
+
+/* For devices with max-width of 768px */
+@media (max-width: 820px) {
+  .container {
+    width: 650px; /* Wider container for medium-sized screens */
+    padding-top: 120px;
+  }
+
+  .introduce-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .picture-header{
+    width: 100%;
+    height: 250px; /* Slightly larger header image */
+    object-fit: cover;
+  }
+
+  .introduce-container h4,
+  .middleHeader h1,
+  .content h1,
+  .content-2 h1,
+  .thank-content h1 {
+    font-size: 20px; /* Adjust font size */
+    margin-top: 35px; /* More spacing on larger screens */
+  }
+
+  .introduce-container h4{
+    text-align: center;
+  }
+
+  .introduce-container p{
+    justify-content: flex-start;
+    margin-left: 30px; /* Adjust left margin */
+    width: 600px; /* Adjust width */
+  }
+
+  .content h1,
+  .content-2 h1{
+    text-align: center;
+  }
+
+  .content-2 p,
+  .content p{
+    justify-content: flex-start;
+    margin-left: 30px; /* Adjust left margin */
+    width: 600px; /* Adjust width */
+  }
+
+  .introduce-container p,
+  .content p,
+  .content-2 p,
+  .thank-content p {
+    font-size: 16px; /* Larger font for medium screens */
+    margin-top: 35px; /* More spacing */
+  }
+
+  .element,
+  .element-2 {
+    flex-direction: column;
+    margin-top: 35px;
+    align-items: center;
+  }
+
+  .element img,
+  .element-2 img {
+    width: 80%; /* Slightly larger images */
+    height: auto;
+    margin-left: 60px;
+  }
+
+  .content,
+  .content-2 {
+    margin: 0;
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  /* Reverse the position of the image and content in element-2 */
+  .element-2 {
+    flex-direction: column-reverse;
+  }
+
+  .thank-container {
+    margin-top: 50px;
+  }
+
+  .thank-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .element-2 {
+    flex-direction: column-reverse;
+  }
+
+  .li {
+    margin-left: 100px; /* Adjust left margin for list items */
+    width: 80px; /* Slightly wider for medium screens */
+  }
+}
+
+
+/* For mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .container {
+    width: 520px; /* Narrower container for mobile */
+    padding-top: 100px;
+  }
+
+  .introduce-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+  .picture-header{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .introduce-container h4,
+  .middleHeader h1,
+  .content h1,
+  .content-2 h1,
+  .thank-content h1 {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+
+  .introduce-container h4{
+    text-align: center;
+  }
+
+  .introduce-container p{
+     justify-content: flex-start;
+     margin-left: 70px;
+     width: 380px;
+  }
+
+  .content h1,
+  .content-2 h1{
+    text-align: center;
+  }
+
+  .content-2 p,
+  .content p{
+    justify-content: flex-start;
+     margin-left: 80px;
+     width: 380px;
+  }
+
+  .introduce-container p,
+  .content p,
+  .content-2 p,
+  .thank-content p {
+    font-size: 14px;
+    margin-top: 30px;
+  }
+
+  .element,
+  .element-2 {
+    flex-direction: column;
+    margin-top: 30px;
+    align-items: center;
+  }
+
+  .element img,
+  .element-2 img {
+    width: 70%;
+    height: auto;
+    margin-left: 75px;
+    margin-top: 50px;
+  }
+
+  .content,
+  .content-2 {
+    margin: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  /* Reverse the position of the image and content in element-2 */
+  .element-2 {
+    flex-direction: column-reverse;
+  }
+
+  .thank-container {
+    margin-top: 40px;
+  }
+
+  .thank-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .element-2 {
+  flex-direction: column-reverse;
+}
+
+  .li {
+    margin-left: 80px;
+    width: 60px;
+
+  }
+}

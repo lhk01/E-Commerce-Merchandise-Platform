@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-image: url('../picture/arcane-league.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-attachment: fixed;  
+  background-repeat: no-repeat;  
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  height: 130vh;
+}
+
+
+.register-container {
+  width: 100%;  
+  max-width: 500px; 
+  height: auto; 
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 50px 60px;
+  text-align: center; 
+  border-radius: 10px; /
+}
+
+.register-container  h1{
+  margin-bottom: 20px;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 150px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 10px 15px;
+  border-radius: 30%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.back-button:hover {
+  background-color: #333;
+  transition: background-color 0.3s ease;
+}
+
+
+.recaptcha {
+  margin-top: 5px; 
+  margin-bottom: 15px; 
+}
+
+/* Submit button styles */
+.submit-btn {
+  padding: 12px 15px; 
+  background-color: #007bff; 
+  border: none; 
+  border-radius: 5px; 
+  color: white; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  transition: background-color 0.15s, opacity 0.15s; 
+  cursor: pointer; 
+}
+
+
+.submit-btn:hover {
+  background-color:  #008bff; 
+}
+
+
+.submit-btn:active {
+  opacity: 0.8; 
+}
+
+
+.content {
+  transition: all 0.3s ease; 
+}
+
+.requirement-list, 
+.requirement-list-2 {
+  text-align: left; 
+  padding: 0; 
+  padding-left: 20px; 
+  list-style: none; 
+}
+
+
+.requirement-list li, 
+.requirement-list-2 li {
+  margin-bottom: 8px; 
+  display: flex; 
+  align-items: center; 
+}
+
+
+.requirement-list i, 
+.requirement-list-2 i {
+  margin-right: 8px; 
+  color: #777; 
+  font-size: 0.2em;
+}
+
+
+.requirement-list i.fa-check, 
+.requirement-list-2 i.fa-check {
+  color: #007bff; 
+  font-size: 0.8em;
+}
+
+
+.error-message {
+  display: flex; 
+  text-align: left; 
+  margin-bottom: 15px; 
+}
+
+/* Image Upload Container */
+.image-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.image-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+
+.preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: none; 
+}
+
+.upload-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #777;
+  text-align: center;
+}
+
+.custom-upload-btn {
+  background-color: #5a67d8;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-upload-btn:hover {
+  background-color: #434190;
+}
+
+#profile_image {
+  display: none; 
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-top: 50px; 
+    height: 110vh;
+  }
+
+  .register-container {
+    width: 90%; 
+    padding: 30px 40px;
+  }
+
+  .register-container h1 {
+    font-size: 24px;
+    margin-bottom: 15px; 
+  }
+
+  .back-button {
+    left: 20px;
+    font-size: 24px; 
+    padding: 8px 12px; 
+  }
+
+  .submit-btn {
+    padding: 10px 12px; 
+    font-size: 14px; 
+  }
+
+  .image-upload-container {
+    margin-bottom: 15px; 
+  }
+
+  .image-preview {
+    width: 120px;
+    height: 120px;
+  }
+
+  .custom-upload-btn {
+    font-size: 12px; 
+    padding: 6px 12px; 
+  }
+
+  .content {
+    padding-top: 10px; 
+  }
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    padding-top: 30px;
+    height: 100vh;
+  }
+
+  .register-container {
+    width: 100%; 
+    padding: 20px 25px; 
+  }
+
+  .register-container h1 {
+    font-size: 22px; 
+    margin-bottom: 10px; 
+  }
+
+  .back-button {
+    left: 10px; 
+    font-size: 20px;
+    padding: 15px 15px; 
+  }
+
+  .submit-btn {
+    padding: 8px 10px; 
+    font-size: 13px; 
+  }
+
+  .image-upload-container {
+    margin-bottom: 10px; 
+  }
+
+  .image-preview {
+    width: 100px; 
+    height: 100px;
+  }
+
+  .custom-upload-btn {
+    font-size: 11px; 
+    padding: 5px 10px; 
+  }
+
+  .error-message {
+    margin-bottom: 10px;
+  }
+
+  .content {
+    padding-top: 8px; 
+  }
+}
+

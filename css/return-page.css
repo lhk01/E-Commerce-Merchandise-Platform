@@ -1,0 +1,200 @@
+/* General reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+.container{
+  padding-top: 180px;
+  padding-bottom: 160px;
+  
+}
+
+.container h2{
+  text-align: center;
+}
+
+/* Container for centering and styling */
+.return-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  
+}
+
+.return-container  img{
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+/* Title styling */
+.title p {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Table styling */
+table {
+  width: 80%;
+  border-collapse: collapse;
+}
+
+/* Header styling */
+thead {
+  background-color: #f8f8f8;
+}
+
+th, td {
+  padding: 20px;
+  text-align: left;
+}
+
+
+
+th {
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  color: #555;
+}
+
+/* Row styling */
+tr {
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+tbody td {
+  font-size: 14px;
+}
+
+/* Positioning link over table rows (if required) */
+tbody tr {
+  position: relative;
+}
+
+tbody tr a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+th a {
+    color: #000;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+th a:hover {
+    text-decoration: underline;
+}
+
+th a:focus {
+    outline: none;
+}
+
+th img {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
+
+
+/* Media query for screens less than or equal to 768px (tablets) */
+@media (max-width: 768px) {
+  .container {
+    padding-top: 120px;
+  }
+
+  .title p {
+    font-size: 24px;
+  }
+
+  .return-container {
+    padding: 30px;
+  }
+
+  .return-container img {
+    width: 120px;
+    height: 120px;
+  }
+
+  table {
+    width: 90%;
+  }
+
+  th, td {
+    padding: 15px;
+  }
+
+  th {
+    font-size: 14px;
+  }
+
+  tbody td {
+    font-size: 12px;
+  }
+
+  /* Adjust hover effect and row appearance */
+  tbody tr {
+    font-size: 12px;
+  }
+}
+
+/* Media query for screens less than or equal to 480px (mobile phones) */
+@media (max-width: 480px) {
+  .container {
+    padding-top: 120px;
+  }
+
+  .title p {
+    font-size: 20px;
+  }
+
+  .return-container {
+    padding: 20px;
+  }
+
+  .return-container img {
+    width: 100px;
+    height: 100px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+
+  th {
+    font-size: 12px;
+  }
+
+  tbody td {
+    font-size: 10px;
+  }
+
+  /* Adjust hover effect and row appearance */
+  tbody tr {
+    font-size: 10px;
+  }
+}

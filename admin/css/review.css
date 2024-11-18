@@ -1,0 +1,141 @@
+/* Reset default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f6;
+}
+
+
+/* Style for star rating icons */
+.star {
+  width: 20px; /* Set star width */
+  height: 20px; /* Set star height */
+  margin-right: 5px; /* Space between stars */
+}
+
+/* Main container for the page content */
+.main {
+  line-height: 1.9; /* Increase line height for readability */
+  background-color: white; /* White background */
+  width: 100%; /* Set container width to 80% of the viewport */
+ 
+  padding: 2%; /* Padding inside the container */
+  text-align: center; /* Center-align text */
+  padding-top: 160px;
+}
+
+/* Header styling within the main content */
+.main h3 {
+  font-size: 18px; /* Large font size for emphasis */
+  text-align: left;
+  width: 100%;
+}
+
+/* Styling for the average rating display */
+.average {
+  font-size: 1.5em; /* Slightly larger font for average rating */
+  text-align: left;
+}
+
+/* Styling for line separator */
+.line {
+  width: 100%; /* Full-width line */
+  margin-bottom: 1%; /* Spacing below the line */
+}
+
+/* Product rating title styling */
+.product-Rating h2 {
+  font-size: 1.4em; /* Increase font size */
+  text-align: left;
+}
+
+/* Table and border styling */
+table, td, th {
+  border: 1px solid gray; /* Add gray border to table and cells */
+}
+
+/* Full-width table styling */
+table {
+  width: 100%; /* Full-width table */
+  text-align: center; /* Center-align text in cells */
+  font-size: 1.2em; /* Slightly larger font */
+  border-collapse: collapse; /* Merge borders for cleaner look */
+}
+
+/* Padding and alignment for table cells */
+td {
+  padding: 12px; /* Padding inside cells */
+  text-align: left; /* Left-align text for readability */
+}
+
+/* Table header styling */
+th {
+  background-color: #e4c0c0; /* Light red background for header */
+}
+
+/* Responsive Styles */
+
+/* Tablet view (up to 768px) */
+@media (max-width: 768px) {
+  .main h3{
+    width: 100%;
+    font-size: 18px;
+
+  }
+
+  .average{
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .line{
+    width: 100%;
+  }
+
+  table th {
+    display: none; /* Hide table headers */
+}
+
+  table, table tbody, table tr, table td {
+      display: block;
+      width: 100%;
+  }
+
+  table tr {
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+  }
+
+  table td {
+      padding: 15px; /* Increase padding for readability */
+      position: relative;
+      text-align: left;
+      line-height: 1.6;
+      border: none; /* Remove borders for a cleaner look on mobile */
+      background-color: #fff;
+  }
+
+  /* Display the `data-title` attribute content as a label before each cell’s content */
+  table td::before {
+      content: attr(data-title) ": ";
+      font-weight: bold;
+      color: #333;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      width: 40%; /* Adjust width to control space for the label */
+      display: inline-block; /* Ensures the label takes its own space */
+  }
+
+  /* Adjusts content alignment with added space */
+  table td {
+      padding-left: 45%; /* Space for label and gap between label and content */
+  }
+}
+

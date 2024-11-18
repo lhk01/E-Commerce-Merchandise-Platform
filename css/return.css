@@ -1,0 +1,164 @@
+.container{
+    padding-top: 180px;
+     padding-bottom: 180px;
+}
+
+.container button{
+    padding: 15px 25px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 150px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+
+/* Main container for the entire content */
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px; /* Smaller container width */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd; /* Add a border around the container */
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Light background for visibility */
+    
+}
+
+/* Product details (image and name layout) */
+.product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.product-details img {
+    max-width: 40%; /* Ensure the image fits within the container */
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-details p {
+    margin-top: 8px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Form styles */
+.container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.reason, .upload-container, .submit-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.container label {
+    width: 160px; /* Adjust the label width for a more compact layout */
+    margin-right: 10px;
+    font-size: 14px; /* Smaller font size */
+}
+
+.container  select, input[type="file"] {
+    width: 100%;
+    padding: 6px; /* Smaller padding for inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px; /* Smaller font size */
+}
+
+.container input[type="submit"] {
+    background-color: #2648c4;
+    color: white;
+    padding: 8px; /* Smaller padding for the button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+}
+
+.container input[type="submit"]:hover {
+    background-color: #17349a;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-top: 120px;
+    }
+
+    .container button {
+        padding: 12px 20px;
+        margin-left: 100px;
+        margin-bottom: 25px;
+    }
+
+    .product-item {
+        max-width: 500px;
+        padding: 15px;
+    }
+
+    .product-details img {
+        max-width: 50%;
+    }
+
+    .container label {
+        width: 130px;
+    }
+
+    .container select, .container input[type="file"] {
+        padding: 5px;
+    }
+
+    .container input[type="submit"] {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .container button {
+        padding: 10px 15px;
+        margin-left: 50px;
+        margin-bottom: 20px;
+    }
+
+    .product-item {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .product-details img {
+        max-width: 60%;
+    }
+
+    .container label {
+        width: 120px;
+    }
+
+    .container select, .container input[type="file"] {
+        padding: 4px;
+    }
+
+    .container input[type="submit"] {
+        padding: 8px;
+        font-size: 12px;
+    }
+}

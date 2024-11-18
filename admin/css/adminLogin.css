@@ -1,0 +1,100 @@
+/* Styles for h1 elements */
+  h1{
+    margin: 0px;
+  }
+  
+  /* Style for the Login message */
+  .login-message{
+    margin-bottom: 15px;
+  }
+  
+  /* Container that centers the login form vertically and horizontally */
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height viewport */
+    padding: 10px; /* Adds some padding for small screens */
+  }
+  
+  /* Main container for the login form */
+  .login_container{
+    width: 90%;  /* Adjusts the width to fit smaller screens */
+    max-width: 400px; /* Sets a maximum width for larger screens */
+    height: auto;
+    background-color: white; /* Background color for the container */
+    padding: 20px; /* Adds padding inside the container */
+    text-align: center; /* Centers the text */
+    border-radius: 10px; /* Smooths the corners */
+  }
+  
+  /* Container for displaying the recaptcha */
+  .recaptcha{
+    margin-top: 5px; /* Adds space above the recaptcha */
+    margin-bottom: 15px; /* Adds space below the recaptcha */
+  }
+  
+  /* Button styles for the submit button */
+  .submit-btn{
+    padding: 12px 15px; /* Adds padding inside the button */
+    background-color: #007bff; /* Button background color */
+    border: none; /* Removes the border */
+    border-radius: 5px; /* Rounds the button corners */
+    color: white; /* Button text color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds shadow to the button */
+    transition: background-color 0.15s, opacity 0.15s; /* Smooth transition effects */
+    cursor: pointer; /* Changes the mouse cursor to a pointer */
+  }
+  
+  /* Hover effect for the submit button */
+  .submit-btn:hover{
+    background-color:  #008bff; /* Changes the background color on hover */
+  }
+  
+  /* Active (clicked) state for the submit button */
+  .submit-btn:active{
+    opacity: 0.8; /* Lowers the button's opacity when clicked */
+  }
+  
+  /* Message container (for error messages or notifications) */
+  .message{
+    margin-bottom: 20px; /* Adds space below the message */
+  }
+  
+  /* Submit button container */
+  .submit{
+    margin-top: 20px; /* Adds space above the submit button */
+  }
+  
+  /* Container for "Forgot password" link */
+  .forgot-container{
+    margin-top: 25px; /* Adds space above the container */
+    margin-bottom: 5px; /* Adds space below the container */
+  }
+  
+  /* Styling for the "Forgot password" and "Register" links */
+  .forgot_password,
+  .register{
+    text-decoration:none; /* Removes the underline from the links */
+    color: blue; /* Sets link color to blue */
+    transition: text-decoration 0.15s; /* Smooth transition for text decoration */
+  }
+  
+  /* Hover effect for the "Forgot password" and "Register" links */
+  .forgot_password:hover,
+  .register:hover{
+     text-decoration:underline; /* Underlines the text when hovered */
+  }
+
+  @media (max-width: 768px) {
+
+      .container{
+        width: 100%;
+      }
+      .login_container{
+        width: 100%;
+      }
+
+  }
+
+  

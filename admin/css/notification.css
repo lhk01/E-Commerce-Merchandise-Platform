@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+}
+
+/* Main content styling */
+.main-content {
+    padding: 20px;
+    padding-top: 160px;
+}
+
+/* Notification list container styling */
+.notification-list-container {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Title of the notification list */
+.notification-list-container h2 {
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+.notification-list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.notification-list, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f9f9;
+}
+
+/* Alternating row colors */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Link styling for View buttons */
+.view-order, .view-refund, .view-review,.view-contact {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;    
+}
+
+.view-order:hover, .view-refund:hover, .view-review:hover {
+    text-decoration: underline;
+}
+
+/* Add padding for notification row cells */
+.notification-list td {
+    padding: 12px;
+}
+
+
+@media (max-width: 768px) {
+    .notification-list thead {
+        display: none; /* Hide table headers on mobile */
+    }
+
+    .notification-list, .notification-list tbody, .notification-list tr, .notification-list td {
+        display: block;
+        width: 100%;
+    }
+
+    .notification-list tr {
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .notification-list td {
+        padding: 15px;
+        position: relative;
+        text-align: left;
+        line-height: 1.8;
+        border: none;
+        background-color: #fff;
+    }
+
+    .notification-list td::before {
+        content: attr(data-title) ": ";
+        font-weight: bold;
+        color: #333;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        width: 40%;
+    }
+
+    /* Additional padding for readability */
+    .notification-list td {
+        padding-left: 50%;
+        white-space: pre-wrap;
+    }
+}

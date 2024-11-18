@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f6;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.topbar {
+    width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.logo{
+    font-size: 0px;
+    font-weight: bold;
+}
+
+.topbar h2 {
+    margin-left: 20px;
+}
+
+.topbar nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.topbar nav ul li {
+    margin: 0 15px;
+}
+
+.topbar nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.topbar nav ul li a:hover {
+    border-radius: 5px;
+}
+
+.main-content {
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+
+.container{
+  margin-top: 2%;
+  line-height: 1.9;
+  margin-left: 5%;
+}
+
+.container h2{
+  margin-bottom: 5%;
+}
+
+td button{
+  margin-left: 25%;
+  width: 50%;
+  height: auto;
+  font-size: 105%;
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  padding-left: 10%;
+}
+
+td button:hover {
+  color: blue;               /* Change text color on hover */
+  text-decoration: underline; /* Add underline effect */
+  opacity: 0.8;              /* Slightly fade the button */
+  cursor: pointer;           /* Ensure the pointer cursor appears */
+}
+
+
+.orderID, .reason{
+  padding: 2% 10% 2% 5%;
+}
+
+.status{
+  padding: 2% 10% 2% 3%;
+}
+
+
+
+
+
+

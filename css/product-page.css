@@ -1,0 +1,737 @@
+.container{
+  padding-top: 220px;
+}
+
+.product-container {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    margin: 10px;
+}
+
+.picture{
+  margin-left: 210px;
+}
+
+.product-views {
+  width: 80px;
+  display: flex; /* Ensures that align-items works */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  margin-left: 150px;
+}
+
+
+.thumbnail.active {
+    border-bottom: 3px solid rgb(220, 220, 220); /* For the selected thumbnail */
+}
+
+
+.main-pic{
+  height: 400px;
+  width: 400px;
+  object-fit: cover; 
+}
+
+.product-views img {
+  height: 60px;
+  width: 60px;
+  object-fit: cover; 
+  object-position: center; 
+  margin-right: 20px;
+}
+
+.details {
+    max-width: 500px;
+    margin-left: 160px; /* Space between image and details */
+}
+
+.name-price p{
+  font-size: 23px;
+  margin-top: 30px;
+  font-weight: 500;
+}
+
+.review p{
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.minus, 
+.plus {
+  padding: 8px 15px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.minus:hover, .plus:hover {
+  background-color: #333;
+}
+
+.num {
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  font-size: 16px;
+  margin: 0 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.increament-btn{
+  margin-top: 30px;
+}
+
+.product-Rating {
+    margin-top: 100px;
+    width: 1000px; /* Adjust width as needed */
+    margin-left: auto; /* Centering */
+    margin-right: auto; /* Centering */
+    text-align: center; /* Centers text inside the container */
+    padding-bottom: 100px;
+}
+
+.reviews-container {
+    display: flex;
+    flex-direction: column; /* Aligns reviews vertically */
+    padding: 10px;
+}
+
+.review-container {
+  margin-top: 30px;
+    padding: 30px 30px;
+    border: solid;
+    margin-bottom: 30px;
+    border-width: 1px;
+    border-radius: 8px;
+    width: 100%; /* Adjust width to be responsive */
+}
+
+.review {
+    display: flex; /* Aligns review elements in a single line */
+    align-items: center; /* Centers items vertically */
+    margin-bottom: 10px; /* Space between reviews */
+}
+
+.username {
+    font-weight: bold; /* Makes the username bold */
+    margin-right: 10px; /* Space between username and stars */
+}
+
+.star {
+    width: 20px; /* Adjust star size as needed */
+    height: 20px; /* Adjust star size as needed */
+    margin-right: 5px; /* Space between stars */
+}
+
+.review-date {
+    margin-left: auto; /* Pushes the review date to the right */
+    color: gray; /* Optional: style for the review date */
+}
+
+.comment {
+    text-align: left; /* Aligns text to the left */
+    margin: 0; /* Optional: Remove default margins */
+}
+
+
+
+.sizes button {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.add-to-bag {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.submit-btn{
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.add-to-bag:hover {
+    background-color: #0056b3;
+}
+
+.msg{
+  margin-top: 20px;
+}
+
+h1, h3 {
+    margin-top: 0;
+}
+
+.description{
+  padding: 20px 10px 20px 10px;
+  border-top: 1px solid  black; 
+  border-bottom: 1px solid  black; 
+
+}
+
+
+
+.stock{
+  margin-top: 25px;
+}
+
+
+.checkbox-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.checkbox-label {
+  margin-top: 10px;
+  padding: 7px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-label input[type="checkbox"] {
+  display: none;
+}
+.checkbox-label.checked {
+  background-color: black;
+  color: white;
+}
+
+.notification {
+  position: fixed;
+  bottom: 3.25em;
+  left: 50%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.3125em 0.625em;
+  border-radius: 0.3125em;
+  z-index: 1000;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  font-size: 1.0em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, 0);
+}
+
+.error_notification {
+  position: fixed;
+  bottom: 3.25em;
+  left: 50%;
+  background-color: #d13535;
+  color: white;
+  padding: 0.3125em 0.625em;
+  border-radius: 0.3125em;
+  z-index: 1000;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  font-size: 1.0em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, 0);
+}
+
+/* Notification opacity */
+.notification.show,
+.error_notification.show {
+  opacity: 1;
+}
+
+/* Notification hidden display */
+.notification.hidden,
+.error_notification.hidden {
+  display: none;
+  opacity: 1;
+}
+
+.related-product {
+  display: flex; /* Use flexbox to align items in a row */
+  gap: 80px; /* Add space between the products */
+  margin-top: 30px;
+  width: auto;
+  align-items: center;
+  align-items: center;
+  justify-content: center; /* Center products horizontally in the container */
+  margin-bottom: 100px;
+}
+
+.related-title{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.r-product {
+  width: 320px;
+  height: 360px;
+  background-color: #F1F1F1;
+  border-radius: 10px;
+  justify-content: center; /* Center horizontally inside product */
+  align-items: center; /* Center vertically inside product */
+  text-align: center; /* Center text content */
+}
+
+
+.r-product img {
+  width: auto;
+  height: 200px;
+  object-fit: contain;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+
+.r-product  img:hover {
+  transform: scale(1.08);
+}
+
+.r-product-link,
+.category-header .item a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits the color from the parent element */
+}
+
+.r-product a{
+  text-decoration: none; 
+  color: black;
+}
+
+
+.r-product  p,
+.r-product  h3{
+  text-align: left;
+  margin-left: 30px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Slider container */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    overflow: hidden;
+}
+
+/* Hide images by default */
+.slider-image {
+    display: none;
+    width: 100%;
+}
+
+.slider-image.active {
+    display: block;
+}
+
+/* Hide buttons by default */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 65%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    user-select: none;
+    transition: background-color 0.6s ease, transform 0.3s ease;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Prevent clicks when hidden */
+}
+
+/* Show buttons on hover */
+.slider-container:hover .prev,
+.slider-container:hover .next {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Position for the buttons */
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* General mobile styling */
+@media (max-width: 768px) {
+  .container {
+    padding-top: 100px;
+    width: 600px;
+   
+  }
+
+  .related-product {
+    flex-direction: column; /* Stack products vertically */
+    gap: 20px; /* Reduce space between products */
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+  }
+
+  related-title {
+    font-size: 1.2em; /* Adjust font size for smaller screens */
+    margin-bottom: 30px;
+  }
+
+  .r-product {
+    width: 80%;
+    height: 60%; /* Allow flexible height */
+    padding: 10px; /* Add padding for spacing */
+  }
+
+  .r-product img {
+    width: 40%; /* Make images responsive */
+    height: auto;
+    margin: 0 auto; /* Center the image */
+    margin-top: 10px; /* Add top margin for spacing */
+  }
+
+  .r-product p,
+  .r-product h3 {
+    font-size: 1em; /* Adjust font size */
+    margin-left: 10px; /* Reduce left margin */
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .slider-container {
+    max-width: 100%; /* Make slider full-width */
+    overflow: hidden;
+  }
+
+  .slider-image {
+    width: 100%; /* Images will take full width of the container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .prev, .next {
+    top: 50%; /* Position buttons more centrally */
+    padding: 10px; /* Reduce padding size */
+    font-size: 1em; /* Smaller font size */
+  }
+
+  .product-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .picture {
+    margin: 0 auto;
+  }
+
+  .main-pic {
+    width: 300px;
+    height: 300px;
+  }
+
+  .product-views {
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .product-views img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .details {
+    width: 100%;
+    max-width: 500px;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .name-price h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+
+  .name-price p {
+    font-size: 1.2em;
+  }
+
+  .review p {
+    font-size: 1em;
+  }
+
+  .sizes {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .increament-btn {
+    margin-top: 20px;
+  }
+
+  .minus, .plus {
+    font-size: 1.2em;
+  }
+
+  .num {
+    font-size: 1em;
+  }
+
+  .stock {
+    margin-top: 20px;
+  }
+
+  .add-to-bag {
+    width: 100%;
+  }
+
+  .description {
+    padding: 15px;
+  }
+
+  .submit-btn {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .checkbox-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .checkbox-label {
+    padding: 5px;
+    font-size: 0.9em;
+  }
+
+  .notification {
+    font-size: 0.9em;
+    padding: 5px 10px;
+  }
+   .product-Rating {
+    width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .reviews-container {
+    padding: 5px;
+  }
+
+  .review-container {
+    padding: 15px;
+    border-width: 1px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  .review {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+  }
+
+  .username {
+    font-size: 1em;
+    margin-right: 5px;
+  }
+
+  .star {
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
+  }
+
+  .review-date {
+    font-size: 0.8em;
+  }
+
+  .comment {
+    font-size: 0.9em;
+  }
+
+}
+
+/* For smaller mobile screens (up to 480px) */
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding-top: 200px;
+    margin-left: 10px;
+  }
+
+  .main-pic {
+    width: 250px;
+    height: 250px;
+    margin-left: 120px;
+  }
+
+  .product-views{
+    margin-right: 150px;
+  }
+
+  .product-views img {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    margin-left: 30px;
+  }
+
+  .details {
+    padding: 5px;
+    margin: 0;
+    margin-left: 100px;
+  }
+
+  .name-price h2 {
+    font-size: 1.3em;
+  }
+
+  .name-price p {
+    font-size: 1em;
+  }
+
+  .sizes {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .minus, .plus {
+    padding: 5px 10px;
+    font-size: 1em;
+  }
+
+  .num {
+    width: 30px;
+  }
+
+  .add-to-bag {
+    padding: 8px;
+    font-size: 1em;
+  }
+
+  .description {
+    padding: 10px;
+  }
+
+  .submit-btn {
+    margin-bottom: 20px;
+  }
+
+  .checkbox-container {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .checkbox-label {
+    font-size: 0.8em;
+    padding: 5px;
+  }
+
+  .notification {
+    font-size: 0.8em;
+  }
+  .product-Rating {
+    width: 100%;
+    padding: 5px;
+    padding-top: 50px; /* Adjust as needed */
+    text-align: center; 
+  }
+
+  .review-container {
+    padding: 10px;
+  }
+
+  .review {
+    flex-direction: row;
+    align-items: flex-start;
+    font-size: 0.8em;
+  }
+
+  .username {
+    font-size: 0.9em;
+  }
+
+  .star {
+    width: 12px;
+    height: 12px;
+  }
+
+  .review-date {
+    font-size: 0.7em;
+    color: gray;
+  }
+
+  .comment {
+    font-size: 0.85em;
+  }
+
+  .product-Rating{
+    margin-bottom: 100px;
+    margin-left: 50px;
+  }
+  .sizes h3{
+    margin-top: 11px;
+    margin-right: 10px;
+  }
+
+  .related-product {
+    gap: 10px; /* Further reduce space between products */
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding-left: 70px;
+    margin-bottom: 100px;
+  }
+
+  .related-title {
+    font-size: 1em; /* Further reduce font size */
+    margin-bottom: 50px;
+    margin-left: 70px;
+  }
+
+  .r-product {
+    padding: 5px; /* Less padding */
+    border-radius: 5px; /* Smaller border radius */
+    width: 90%;
+  }
+
+  .r-product img {
+    margin-top: 5px; /* Less margin */
+  }
+
+  .r-product p,
+  .r-product h3 {
+    font-size: 0.9em; /* Smaller text */
+    margin-left: 5px; /* Adjust left margin */
+  }
+
+  
+  .prev, .next {
+    padding: 8px; /* Even smaller buttons */
+    font-size: 0.9em; /* Smaller font size */
+  }
+}
+

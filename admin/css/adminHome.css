@@ -1,0 +1,206 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+}
+
+.main-content {
+    padding: 20px;
+    padding-top: 160px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+/* Download button */
+.download-button {
+    display: inline-block; 
+    padding: 10px 20px; 
+    background-color: #4CAF50; 
+    color: white; 
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 20px;
+}
+
+.download-button:hover {
+    background-color: #45a049; 
+    transform: scale(1.05); 
+}
+
+/* Dashboard overview (cards) */
+.dashboard-overview {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 23%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: padding 0.3s ease, font-size 0.3s ease;
+}
+
+.card h3 {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 0;
+}
+
+/* Recent orders section */
+.recent-orders {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f9f9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Line chart section */
+.line-chart-section {
+    position: relative;
+    width: 100%; /* or specify a fixed width */
+    height: 400px; /* Adjust the height as needed */
+    margin-bottom: 10px;
+}
+
+#salesChart {
+    width: 100% !important; 
+    height: 100% !important; 
+    display: block; 
+}
+
+/* Responsive adjustments for screens up to 768px */
+@media (max-width: 768px) {
+    .dashboard-overview {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 80%; /* Full width for each card on screens up to 768px */
+        padding: 15px; /* Reduced padding for compact layout */
+        margin-bottom: 15px;
+        margin-left: 10%;
+    }
+
+    .card h3 {
+        font-size: 14px;
+    }
+
+    .card p {
+        font-size: 20px;
+    }
+
+    /* Hide table headers on mobile */
+    table thead {
+        display: none;
+    }
+
+    /* Table styling for mobile */
+    table, table tbody, table tr, table td {
+        display: block;
+        width: 100%;
+    }
+
+    table tr {
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+    }
+
+    table td {
+        padding: 15px;
+        position: relative;
+        text-align: left;
+        line-height: 1.6;
+        border: none;
+        background-color: #fff;
+    }
+
+    /* Display the `data-title` attribute content as a label before each cell’s content */
+    table td::before {
+        content: attr(data-title) ": ";
+        font-weight: bold;
+        color: #333;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        width: 40%; /* Adjust width to control space for the label */
+        display: inline-block;
+    }
+
+    /* Adjusts content alignment with added space */
+    table td {
+        padding-left: 45%;
+    }
+
+    /* Chart section adjustments */
+    .line-chart-section {
+        height: 300px; /* Adjust chart height for smaller screens */
+    }
+    .download-button {
+        width: 80% ;
+        margin-left: -10%;
+        font-size: 18px;
+    }
+
+    .sales-overview{
+        font-size: 18px;
+    }
+}

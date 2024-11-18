@@ -1,0 +1,136 @@
+html, body {
+  height: auto;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+p{
+  color: rgb(96,96,96);
+  font-size: 15px;
+  margin-top: 22px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+  padding: 10px; /* Adds some padding for small screens */
+}
+
+
+.item-details,
+.description{
+  width: 330px;
+  height: 25px;
+  border-radius: 5px;
+  border-style: solid;
+  padding: 10px 20px;
+  margin-bottom: 12px;
+  margin-top: 5px;
+}
+
+.categories {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border-style: solid;
+  padding: 5px; /* Adjust padding to fit the text properly */
+  margin-bottom: 12px;
+  margin-top: 5px;
+  background-color: white; /* Ensure background is white */
+  color: black; /* Set text color to be visible */
+  font-size: 14px;
+  border-color: rgb(72, 72, 72) ;
+  border-width: 2px;
+}
+
+
+
+
+
+.description {
+  width: 330px;
+  height: 80px;
+  resize: none;
+  border-color: rgb(102, 102, 102) ;
+  border-width: 2px;
+}
+
+.image-container {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+#drop-area {
+  width: 380px;
+  height: 200px; /* Increased height to fit content */
+  background-color: #f7f8ff;
+  border-radius: 30px;
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#img-view {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: 2px dashed #000000;
+  background-color: #f7f8ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+}
+
+#img-view img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px; /* Spacing below the image */
+}
+
+#img-view p {
+  font-size: 16px;
+  color: black;
+  margin: 5px 0; /* Adjusted margin for spacing */
+}
+
+#img-view span {
+  font-size: 13px;
+  color: rgb(105, 103, 103);
+  margin-top: 5px;
+}
+
+.submit-btn{
+  padding: 12px 15px 12px 15px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.15s, opacity 0.15s;
+  cursor: pointer;
+}
+
+.submit-btn:hover{
+  background-color:  #008bff;
+}
+
+.submit-btn:active{
+  opacity: 0.8;
+}
+
+.submit-container{
+  margin-top: 20px;
+}
+
+

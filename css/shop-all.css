@@ -1,0 +1,369 @@
+html {
+  scroll-behavior: smooth;
+}
+
+ *{
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* Existing styles */
+.container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 350vh; /* Set height to 60% of the viewport height */
+  padding-bottom: 50px;
+}
+
+.shop-all-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column; /* Arrange title elements vertically */
+  align-items: center; /* Center title elements */
+}
+
+.title h2 {
+  font-size: 30px; /* Title size */
+  margin: 0; /* Remove default margin */
+}
+
+.title p {
+  font-size: 20px;
+  color: rgb(61, 61, 61);
+}
+
+.category-header {
+  display: flex; /* Enables flexbox layout */
+  justify-content: space-around; /* Evenly distributes items */
+  align-items: flex-start; /* Align items at the top */
+  gap: 160px;
+  margin-top: 50px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column; /* Stacks image and text vertically */
+  align-items: center; /* Centers image and text */
+}
+
+.category-header img {
+  width: auto;
+  height: 170px;
+  object-fit: contain;
+}
+
+.item p {
+  margin-top: 10px; /* Adds some space between the image and text */
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.latest {
+  display: flex;
+  flex-direction: row; /* Default to row layout */
+  margin-top: 100px;
+}
+
+.latest img {
+  width: auto;
+  height: 300px;
+  object-fit: contain;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.content {
+  height: 300px;
+  width: 480px; /* Define a width for the content box */
+  background-color: #D9D9D9;
+  border-top-right-radius: 10px; 
+  border-bottom-right-radius: 10px; 
+}
+
+.content h3 {
+  font-size: 23px;
+  font-weight: 500;
+  margin-left: 50px;
+  margin-top: 70px;
+  margin-bottom: 25px;
+}
+
+.content p {
+  width: 400px;
+  font-size: 17px;
+  margin-left: 50px;
+  color: #676767;
+}
+
+.category-p {
+  display: flex;
+  justify-content: space-between; /* Space between the elements */
+  align-items: center; /* Align items vertically in the center */
+  padding: 10px; /* Add some padding for spacing */
+  margin-top: 100px;
+}
+
+.category-p a{
+  color: rgb(19, 61, 212);
+  text-decoration: none;
+}
+
+.category-p a:hover{
+  text-decoration: underline;
+}
+
+.category h2 {
+  margin: 0; /* Remove default margin */
+}
+
+.category a {
+  text-decoration: none; /* Remove underline */
+  color: #000; /* Set link color */
+  font-size: 16px; /* Set the font size */
+}
+
+.product-container {
+  display: flex; /* Use flexbox to align items in a row */
+  gap: 50px; /* Add space between the products */
+  flex-wrap: wrap; /* Allow wrapping to the next line if the screen is too narrow */
+  margin-top: 30px;
+  justify-content: center; /* Center products horizontally in the container */
+}
+
+.product {
+  width: 320px;
+  height: 360px;
+  background-color: #F1F1F1;
+  border-radius: 10px;
+  justify-content: center; /* Center horizontally inside product */
+  align-items: center; /* Center vertically inside product */
+  text-align: center; /* Center text content */
+}
+
+.product img {
+  width: auto;
+  height: 200px;
+  object-fit: contain;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+
+.product img:hover {
+  transform: scale(1.08);
+}
+
+.product-link,
+.category-header .item a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits the color from the parent element */
+}
+
+
+
+.product p,
+.product h3{
+  text-align: left;
+  margin-left: 30px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Slider container */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    overflow: hidden;
+}
+
+/* Hide images by default */
+.slider-image {
+    display: none;
+    width: 100%;
+}
+
+.slider-image.active {
+    display: block;
+}
+
+/* Hide buttons by default */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 65%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    user-select: none;
+    transition: background-color 0.6s ease, transform 0.3s ease;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Prevent clicks when hidden */
+}
+
+/* Show buttons on hover */
+.slider-container:hover .prev,
+.slider-container:hover .next {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Position for the buttons */
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+
+
+
+/* Styles for screens up to 768px wide */
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 600px;
+    margin: auto; /* Center the container */
+    padding-top: 1000px;
+  }
+
+  .shop-all-container {
+    display: flex;
+    flex-direction: row; /* Display items in a row */
+    gap: 10px; /* Space between items */
+    flex-wrap: wrap; /* Allow wrapping to fit items in a row */
+  }
+
+  .title h2 {
+    font-size: 24px;
+  }
+
+  .title p {
+    font-size: 16px;
+  }
+
+  .category-header {
+    gap: 20px;
+  }
+
+  .item img {
+    height: 100px;
+  }
+
+  .latest {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+  }
+
+  .latest img {
+    width: 80%;
+    height: 180px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .content {
+    width: 80%;
+    height: 180px;
+    padding: 15px;
+    font-size: 12px;
+  }
+
+  .product-container {
+    gap: 15px;
+  }
+
+  .product {
+    width: 280px;
+    height: 320px;
+  }
+
+  .product img {
+    height: 150px;
+  }
+
+  .category-header{
+    display: none;
+  }
+}
+
+/* Styles for screens up to 480px wide */
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 100%; /* Full width on very small screens */
+    padding-top: 800px;
+    margin-left: 50px;
+    margin-bottom: 660px;
+  }
+
+  .title h2 {
+    font-size: 20px;
+  }
+
+  .title p {
+    font-size: 14px;
+  }
+
+  .category-header {
+    gap: 10px;
+  }
+
+  .item img {
+    height: 80px;
+  }
+
+  .latest img {
+    width: 90%;
+  }
+
+  .content{
+    width: 328px;
+    height: 200px;
+    border: none;
+
+  }
+
+  .content h3 {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .content p {
+    font-size: 12px;
+    width: 230px;
+    margin-left: 20px;
+    padding-bottom: 20px;
+  }
+
+  .product {
+    width: 260px;
+    height: 280px;
+  }
+
+  .product img {
+    height: 130px;
+  }
+
+  .category-header{
+    display: none;
+  }
+}
+

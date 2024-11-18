@@ -1,0 +1,57 @@
+/* Styling for the input fields */
+  .input {
+    padding: 25px 15px 15px 15px; /* Adds padding inside the input, larger at the top for label space */
+    font-size: 15px;  /* Font size for input text */
+    border-radius: 8px; /* Rounds the corners of the input */
+    outline: none; /* Removes default outline when focused */
+    background-color: transparent; /* Transparent background for input */
+    border-width: 1px; /* Default border width */
+    transition: border-color 0.15s, border-width 0.15s; /* Smooth transition for border changes on focus */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the input field */
+    width: 90%; /* Sets the input width to 90% of its parent container */
+  }
+  
+  /* Wrapper for the input field and label */
+  .input-container {
+    position: relative; /* Allows for absolute positioning of the label */
+    width: 100%; /* Ensures the container takes full width of the parent */
+    margin-bottom: 30px; /* Adds space below each input container */
+  }
+  
+  /* Label for the input field */
+  .input-container label {
+    position: absolute; /* Positions the label inside the input field */
+    left: 15px; /* Aligns the label with the input text */
+    top: 50%; /* Vertically centers the label initially */
+    transform: translateY(-50%); /* Corrects vertical alignment */
+    font-size: 15px; /* Initial font size for the label */
+    transition: 0.3s ease all; /* Smooth transition for label movement and size change */
+    pointer-events: none; /* Prevents label from being clicked */
+  }
+  
+  /* Focus state for the input field */
+  .input:focus {
+    border-color: #007bff; /* Changes border color to blue on focus */
+    border-width: 2px; /* Increases border width when focused */
+  }
+  
+  /* Label position and size change when input is focused or has content */
+  .input:focus + label,
+  .input:not(:placeholder-shown) + label {
+    top: 15px; /* Moves the label above the input when focused or filled */
+    font-size: 13px; /* Reduces the label size when input is focused or filled */
+  }
+
+  @media (max-width: 768px) {
+    .input-container{
+      width: 100%;
+    }
+
+    .input{
+      width: 100%;
+    }
+    
+}
+
+  
+  

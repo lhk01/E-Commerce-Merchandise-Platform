@@ -1,0 +1,176 @@
+ *{
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+footer {
+    
+    background-color: #f8f8f8;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 30px 120px;
+}
+
+.footer-section {
+    margin: 0 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+
+.logo-footer {
+    display: flex;
+    font-size: 0.9em;
+    padding-top: 40px;
+    align-items: center;
+    justify-content: center;
+    border-top: 0.1em solid grey;
+    width: 50%; /* Set to a specific width */
+    margin: 30px auto; 
+    margin-bottom: 35px;
+
+}
+
+.logo-footer img {
+    max-width: 30px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+
+
+
+
+.payment-icons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.payment h4{
+  text-align: center;
+}
+
+.paypal{
+  width: 35px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.visa,
+.cod,
+.master,
+.tng{
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.tng{
+  width: 50px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.language{
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    margin-bottom: 15px;
+    margin-right: 20px;
+}
+
+.language select{
+    padding: 10px 20px;
+}
+
+.footer-content a{
+    text-decoration: none;
+    color: black;
+}
+
+.footer-content a:hover{
+    text-decoration: underline;
+}
+
+/* Mobile Responsive Styles (Max Width 600px) */
+@media (max-width: 600px) {
+
+    footer{
+      width: 120%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px; /* Reduce padding for small screens */
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+        width: 100%; /* Each section takes full width on small screens */
+    }
+
+    .footer-section h4 {
+        font-size: 1.1em; /* Slightly smaller heading size for mobile */
+    }
+
+    .footer-section ul li {
+        margin-bottom: 8px; /* Reduce spacing between list items */
+    }
+
+    .logo-footer {
+        width: 400px; /* Ensure the logo-footer fits within screen */
+        padding: 15px 20px; /* Add some side padding for spacing */
+        margin: auto;
+        font-size: 12px;
+
+    }
+
+    .logo-footer img{
+        width: 20px;
+    }
+
+
+    .payment-icons {
+        align-items: center;
+        margin-top: 20px; /* Adjust spacing for payment icons */
+    }
+
+    .payment-icons img {
+        margin: 10px 0; /* Space out payment icons vertically */
+    }
+
+    .footer-section ul {
+        padding-left: 0; /* Avoid padding in smaller screens */
+    }
+
+    footer {
+        padding: 20px; /* Overall padding for footer in mobile */
+    }
+
+}

@@ -1,0 +1,176 @@
+body{
+  background-color: #ffffff;
+}
+
+.container{
+  display: flex;
+}
+
+.new-item{
+  align-items: center;
+  object-position: center;
+  margin-top: -60px;
+  margin-left: 1px;
+  display: block;
+}
+
+.new-item img {
+  width: 1535px;
+  height: 800px;
+  margin-left: -200px;
+  object-fit: contain;
+  position:relative;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+  .new-item img {
+    width: 100%;   /* Make the image responsive */
+    height: auto;  /* Adjust height proportionally */
+    margin-left: 0; /* Remove negative margin for smaller screens */
+    position: relative; /* Change position so it adjusts with the content */
+    object-fit: cover;  /* Ensure the image covers the screen nicely */
+  }
+}
+
+.text-overlay {
+  position: absolute;
+  top: 60%; /* Adjust position as needed */
+  left: 25%;
+  transform: translateX(-50%);
+  z-index: 1; /* Ensure the text stays above the image */
+}
+
+.title{
+  font-size: 55px;
+  color: white;
+}
+
+.description{
+  width: 550px;
+  margin-top: 30px;
+  font-size: 23px;
+  font-weight: 600;
+  color: white;
+}
+
+.btn{
+  margin-top: 30px;
+  padding: 20px 40px 20px 40px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 25px;
+  color: black;
+}
+
+/* Make text responsive for mobile devices */
+@media only screen and (max-width: 768px) {
+  .text-overlay {
+    font-size: 24px; /* Reduce text size for smaller screens */
+    top: 5%; /* Adjust position for smaller screens */
+  }
+}
+
+.container-2{
+  display: flex;
+ 
+}
+
+.this-month-pick{
+  margin-left: 650px;
+  display: block;
+  
+}
+
+
+.container-3 {
+    display: flex;              /* Enable flexbox */
+    justify-content: center;    /* Center horizontally */
+    align-items: center;        /* Center vertically */
+    height: 90vh;             /* Set height (adjust as needed) */
+}
+
+.first-item{
+  background-color: #F5F5F5;
+  width: 500px;  /* Set the width of the box */
+  height: 595px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.container-4{
+  display: flex;
+}
+
+.container-4-1,
+.container-4-2{
+  background-color: #F5F5F5;
+  width: 300px;  /* Set the width of the box */
+  height: 290px;
+  object-fit: contain;
+  margin-left: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.container-4-2{
+  margin-top: 10px;
+}
+
+.product{
+  margin-left: 30px;
+  height: 190px;
+  width: 230px;
+  object-fit: contain;
+  align-items: center;
+}
+
+.first-item-pic{
+  height: 450px;
+  width: 450px;
+  object-fit: contain;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.des{
+  margin-left: 30px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.des-2{
+  margin-left: 30px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+p{
+  margin-bottom: 10px;
+}
+
+.ads-1-pic{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.ads-2-pic{
+  width: auto;
+  height: 400px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.ads-2{
+  margin-bottom: 50px;
+}
+
+.ads-1{
+  margin-bottom: 100px;
+  width: 1000px;
+  background-color: red;
+
+}

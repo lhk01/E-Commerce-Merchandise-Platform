@@ -1,0 +1,240 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
+}
+
+.logo img {
+    height: 40px;
+    margin-left: 110px;
+}
+
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+}
+
+.desktop-view {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    width: 100%;
+}
+.nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 60px;
+}
+.nav ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+
+.search-box {
+    border: 1px solid black !important;
+    padding: 10px !important;
+    width: 230px !important;
+    border-radius: 4px !important;
+}
+
+
+.right-side {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+}
+
+.search-box {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.account, .cart {
+    text-decoration: none;
+    color: #000000;
+}
+.account-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    right: 40px;
+    top: 65px;
+    list-style-type: none;
+    padding: 10px;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.shopping-icon {
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.mobile-shopping-icon{
+  font-size: 22px;
+  color: rgb(0, 0, 0);
+  transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.account-dropdown li a {
+    display: block;
+    padding: 5px;
+    color: #000000;
+    text-decoration: none;
+}
+.account-dropdown li a:hover {
+    background-color: rgb(241, 241, 241);
+}
+
+/* Mobile View Styling */
+.mobile-view {
+    display: none;
+}
+.search-icon, .cart, .hamburger-menu {
+    font-size: 24px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.search-dropdown {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    z-index: 9999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+}
+
+.search-dropdown input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    padding: 10px;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+.mobile-nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    padding: 10px;
+    display: block;
+}
+
+.right-side .account:hover + .account-dropdown,
+.right-side .account-dropdown:hover {
+  display: block;
+  visibility: visible;  
+  opacity: 1; 
+  transition: opacity 0.3s ease, visibility 0s ease 0s; 
+}
+
+.right-side .account-dropdown {
+display: block;
+visibility: hidden;
+opacity: 0; 
+transition: opacity 0.3s ease, visibility 0s ease 0.3s; 
+}
+
+/* Click Toggle for Mobile Dropdown */
+.account-dropdown.active {
+display: block;
+}
+
+.cart-quantity {
+  position: absolute;
+  top: 5px;
+  right: -4px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 5px;
+  font-size: 10px;
+ display: none;
+}
+
+.cart-quantity-mobile{
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 5px;
+    font-size: 10px;
+    top: 35px;
+    left: 275px;
+    position: absolute;
+     display: none;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .center-wrapper, .desktop-view {
+        display: none;
+    }
+
+    .logo img{
+        margin-left: 0;
+    }
+    
+    .mobile-view {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+    }
+    .search-dropdown.active {
+        display: flex;
+        flex-direction: column;
+    }
+    .mobile-nav.active {
+        display: flex;
+    }
+    .mobile-view .cart, .mobile-view .hamburger-menu, .account {
+        margin-left: 20px;
+    }
+}

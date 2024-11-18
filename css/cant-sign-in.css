@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f4f4;
+  background-image: url('../picture/forgot-password-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative; 
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 0; 
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: -1; 
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 150px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 10px 15px;
+  border-radius: 30%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.back-button:hover {
+  background-color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.container-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative; 
+  z-index: 1; 
+}
+
+.container-2 h1 {
+  font-size: 60px;
+  color: white;
+  margin-bottom: 80px;
+}
+
+.selection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  gap: 50px;
+}
+
+.forgot {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 300px;
+  height: 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.forgot img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.forgot h3 {
+  font-size: 22px;
+  color: #333;
+}
+
+.forgot p {
+  color: #666;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.forgot:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.selection a{
+  text-decoration: none;
+}
+
+/* For screens 768px or smaller */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .container-2 {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+  }
+
+  .container-2 h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+
+  .selection {
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .forgot {
+    width: 250px;
+    height: 220px;
+    padding: 20px;
+  }
+
+  .forgot h3 {
+    font-size: 18px;
+  }
+
+  .forgot p {
+    font-size: 14px;
+  }
+
+  .back-button {
+    top: 15px;
+    left: 20px;
+    font-size: 25px;
+    padding: 8px 12px;
+  }
+}
+
+/* For screens 480px or smaller */
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .container-2 {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+  }
+
+  .container-2 h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .selection {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .forgot {
+    width: 220px;
+    height: 200px;
+    padding: 15px;
+  }
+
+  .forgot h3 {
+    font-size: 16px;
+  }
+
+  .forgot p {
+    font-size: 12px;
+  }
+
+  .back-button {
+    top: 10px;
+    left: 30px;
+    font-size: 20px;
+    padding: 10px 15px;
+  }
+}

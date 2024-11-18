@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f6;
+}
+
+.main-content {
+  padding: 20px;
+  padding-top: 160px;
+}
+
+/* Refund list container styling */
+.refund-list-container {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Title of the refund request list */
+.refund-list-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Table styling */
+.refund-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.refund-list, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f8f9f9;
+  font-weight: bold;
+}
+
+/* Alternating row colors */
+tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+/* Proof image styling */
+.refund-list td img {
+  width: auto;
+  height: auto;
+  margin-left: 10px;
+}
+
+/* Button styling */
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  color: black;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 16px;
+  background-color: white;
+}
+
+button:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  
+  table th {
+      display: none; /* Hide table headers */
+  }
+
+  table, table tb, table tr, table td {
+      display: block;
+      width: 100%;
+  }
+
+  table tr {
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+  }
+
+  .refund-list td img {
+    width: 50px;
+    height: 50px;
+    
+  }
+
+  table td {
+      padding: 15px; /* Increase padding for readability */
+      position: relative;
+      text-align: left;
+      line-height: 1.6;
+      border: none; /* Remove borders for a cleaner look on mobile */
+      background-color: #fff;
+  }
+
+  /* Display the `data-title` attribute content as a label before each cell’s content */
+  table td::before {
+      content: attr(data-title) ": ";
+      font-weight: bold;
+      color: #333;
+      position: absolute;
+      padding-top: 4px;
+      left: 10px;
+      top: 10px;
+      width: 40%; /* Adjust width to control space for the label */
+      display: inline-block; /* Ensures the label takes its own space */
+  }
+
+  /* Adjusts content alignment with added space */
+  table td {
+      padding-left: 35%; /* Space for label and gap between label and content */
+      
+      
+  }
+
+
+  
+  
+}
+
+
+
+
+
+
+
+

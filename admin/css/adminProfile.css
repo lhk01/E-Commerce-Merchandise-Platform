@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+}
+
+/* Main Content Styling */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-top: 160px;
+    
+}
+
+/* White Box Styling */
+.main-content2 {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 100%;
+    
+    text-align: left;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.profile-section img.admin-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.profile-section form {
+    align-self: stretch; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea, button {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #f4f7f6;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+}
+
+button:hover {
+    background-color: #8bf190;
+}
+
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 15px;
+        padding-top: 160px;
+           /* Expand width slightly for smaller screens */
+    }
+
+    .main-content2{
+        width: 100%;
+    }
+
+    /* Optional: reduce font sizes slightly on smaller screens */
+    input[type="text"],
+    input[type="email"],
+    input[type="file"],
+    button {
+        padding: 8px;
+        font-size: 14px;
+        width: 100%;
+    }
+}
+  

@@ -1,0 +1,478 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+.container {
+  padding-top: 190px;
+  padding-bottom: 150px;
+}
+
+.back-btn{
+    padding: 15px 25px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 150px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+
+/* Container for the entire order details section */
+.order-details-container {
+    width: 700px;
+    margin: 0 auto;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+}
+
+/* Title and order information */
+.title {
+    text-align: left;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.title h3 {
+    text-align: center;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.title p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Container for each order item */
+.container-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Image styling */
+.img img {
+    width: 115px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Product details styling */
+.product-details {
+    flex: 1;
+    margin-left: 25px;
+    font-size: 13px;
+}
+
+.product-details p {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.product-details .quantity-container {
+    display: flex;
+    align-items: center;
+}
+
+.product-details .quantity-display {
+    font-size: 11px;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Price styling */
+.container-2 {
+    text-align: right;
+    font-size: 13px;
+}
+
+.price {
+    font-weight: 600;
+    color: #333;
+    margin-right: 30px;
+}
+
+/* Message styling */
+.product-details p {
+    font-size: 11px;
+    color: #333;
+}
+
+.message {
+    font-size: 11px;
+    color: #777;
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+
+.container-3 {
+    display: flex;          /* Make this a flex container */
+    align-items: center;   /* Align items vertically in the center */
+    justify-content: center; /* Optional: center items horizontally */
+}
+
+
+.review-and-refund{
+    justify-content: flex-start;
+    display: flex;
+}
+
+/* Styling the review container */
+.review,
+.refund {
+    margin-right: 25px;
+    margin-top: 10px;
+    justify-content: flex-start;
+    display: flex;
+}
+
+.review button,
+.refund button{
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    justify-content: flex-start;
+    background-color: #e4e4e4;
+    border-radius: 5px;
+    transition: background-color 0.15s, opacity 0.15s;
+}
+
+.review button:hover,
+.refund button:hover{
+    padding: 5px 10px;
+    border: none;
+    background-color: #cdcdcd;
+}
+
+.review button:active,
+.refund button:active{
+    opacity: 0.8;
+}
+
+
+
+
+
+/* Styling the form inside the review section */
+.review form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+}
+
+/* Styling the labels */
+.review label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+    width: 100%;
+    text-align: left;
+}
+
+/* Styling the input fields */
+.review input[type="text"],
+.review input[type="number"],
+.review textarea {
+    width: 100%; /* Set to full width of the review container */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Styling the textarea */
+.review textarea {
+    resize: vertical;
+}
+
+/* Styling the submit button */
+.review input[type="submit"] {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Make the button full width */
+}
+
+.review input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.pay-now,
+.cancel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.pay-now ,
+.cancel {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.15s, opacity 0.15s;
+    margin-right: 20px;
+}
+
+.cancel{
+    background-color: #a43535;
+}
+
+.cancel:hover{
+    background-color: #a32424;
+}
+
+.pay-now:hover{
+    background-color: #026cdd;
+}
+
+.pay-now:active{
+    opacity: 0.8;
+}
+
+
+/* For screens with a maximum width of 768px */
+@media (max-width: 768px) {
+    .container {
+        padding-top: 150px;
+    }
+
+    .back-btn {
+        margin-left: 20px;
+    }
+
+    .order-details-container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .title h3 {
+        font-size: 16px;
+    }
+
+    .title p {
+        font-size: 14px;
+    }
+
+    .container-1 {
+        flex-direction: row;
+        padding: 10px 0;
+    }
+
+    .img img {
+        width: 100px;
+    }
+
+    .product-details p {
+        font-size: 12px;
+    }
+
+    .price {
+        font-size: 12px;
+    }
+
+    .message {
+        font-size: 10px;
+    }
+
+    .review-and-refund {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .review button,
+    .refund button {
+        padding: 5px 12px;
+        font-size: 12px;
+    }
+
+    .review form {
+        width: 100%;
+    }
+
+    .review input[type="text"],
+    .review input[type="number"],
+    .review textarea {
+        font-size: 12px;
+    }
+
+    .review input[type="submit"] {
+        font-size: 14px;
+    }
+}
+
+/* For screens with a maximum width of 480px */
+@media (max-width: 480px) {
+    .container {
+        padding-top: 120px;
+        margin-left: 100px;
+    }
+
+    .back-btn {
+        margin-left: 10px;
+        padding: 12px 12px;
+        font-size: 12px;
+    }
+
+    .order-details-container {
+        width: 95%;
+        padding: 8px;
+    }
+
+    .title h3 {
+        font-size: 14px;
+    }
+
+    .title p {
+        font-size: 12px;
+    }
+
+    .container-1 {
+        flex-direction: row;
+        padding: 8px 0;
+    }
+
+    .img img {
+        width: 85px;
+    }
+
+    .product-details p {
+        font-size: 11px;
+    }
+
+    .price {
+        font-size: 11px;
+    }
+
+    .message {
+        font-size: 9px;
+    }
+
+    .review-and-refund {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .review button,
+    .refund button {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+
+    .review form {
+        width: 100%;
+    }
+
+    .review input[type="text"],
+    .review input[type="number"],
+    .review textarea {
+        font-size: 11px;
+    }
+
+    .review input[type="submit"] {
+        font-size: 13px;
+    }
+}
+
+/* For screens with a maximum width of 360px */
+@media (max-width: 360px) {
+    .container {
+        padding-top: 120px;
+        margin-left: 100px;
+    }
+
+    .back-btn {
+        margin-left: 20px;
+        padding: 8px 10px;
+        font-size: 9px;
+    }
+
+    .order-details-container {
+        width: 90%;
+        padding: 5px;
+    }
+
+    .title h3 {
+        font-size: 12px;
+    }
+
+    .title p {
+        font-size: 10px;
+    }
+
+    .container-1 {
+        flex-direction: row;
+        padding: 5px 0;
+    }
+
+    .img img {
+        width: 65px;
+    }
+
+    .product-details p {
+        font-size: 10px;
+    }
+
+    .price {
+        font-size: 10px;
+    }
+
+    .message {
+        font-size: 8px;
+    }
+
+    .review-and-refund {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .review button,
+    .refund button {
+        padding: 3px 8px;
+        font-size: 10px;
+    }
+
+    .review form {
+        width: 100%;
+    }
+
+    .review input[type="text"],
+    .review input[type="number"],
+    .review textarea {
+        font-size: 10px;
+    }
+
+    .review input[type="submit"] {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f6;
+}
+
+.main-content {
+  padding: 20px;
+  padding-top: 160px;
+}
+
+/* Contact list container */
+.product-list {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Title styling */
+.product-list h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Table styling for contact list */
+.contact-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contact-table th, .contact-table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.contact-table th {
+  background-color: #f8f9f9;
+  font-weight: bold;
+}
+
+.contact-table, th, td {
+  border: 1px solid #ddd;
+}
+
+/* Alternating row colors */
+.contact-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover effect for rows */
+.contact-table tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+/* Style for table data */
+.contact-table td {
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  table.contact-table thead {
+      display: none; /* Hide table headers */
+  }
+
+  table.contact-table, 
+  table.contact-table tbody, 
+  table.contact-table tr, 
+  table.contact-table td {
+      display: block;
+      width: auto;
+  }
+
+  table.contact-table tr {
+      margin-bottom: 15px; /* More space between rows */
+      border: 1px solid #ddd; /* Adds border around each row for boxed look */
+      border-radius: 5px; /* Rounds the corners of each box */
+      padding: 10px; /* Padding inside the box */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+  }
+
+  table.contact-table td {
+      padding: 10px 10px 10px 20%; /* Reduced left padding */
+      position: relative;
+      text-align: left;
+      line-height: 1.8;
+      border: none;
+      background-color: #fff;
+  }
+
+  /* Style for label displayed before each cell’s content */
+  table.contact-table td::before {
+      content: attr(data-title) ": ";
+      font-weight: bold;
+      color: #333;
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: auto;
+      display: inline-block;
+  }
+
+  /* Additional adjustments for readability */
+  table.contact-table td {
+      padding-top: 10px; /* Reduced padding for more compact layout */
+      
+      padding-left: 30%; /* Adjust padding for mobile */
+  }
+}

@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+}
+
+
+.main-content {
+    padding: 20px;
+    padding-top: 160px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px; 
+    margin-bottom: 10px;
+}
+
+.main-content-box {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between; /* Aligns the two sections to the left and right */
+    align-items: flex-start; /* Aligns content to the top of the container */
+    margin-bottom: 20px;
+}
+
+.shipping-status {
+    text-align: right; 
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f9f9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.status-update {
+    margin-top: 20px;
+}
+
+.status-update select {
+    padding: 8px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.status-update .button {
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #000000;
+    background-color: #55b16b;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.status-update .button:hover {
+    background-color: #218838;
+}
+
+.proof-image {
+    display: none; /* Hide the image from being displayed */
+}
+
+/* Style for the modal (pop-up) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal content */
+.modal-content {
+    margin: 8% auto;
+    display: block;
+    width: 100%;
+    max-width: 650px;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 120px;
+    right: 255px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .status-update {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 160px;
+    }
+
+    .status-update select,
+    .status-update .button {
+        width: 100%;
+    }
+
+    table thead {
+        display: none; /* Hide table headers */
+    }
+
+    table, table tbody, table tr, table td {
+        display: block;
+        width: 100%;
+    }
+
+    table tr {
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+    }
+
+    table td {
+        padding: 15px; /* Increase padding for readability */
+        position: relative;
+        text-align: left;
+        line-height: 1.6;
+        border: none; /* Remove borders for a cleaner look on mobile */
+        background-color: #fff;
+    }
+
+    /* Display the `data-title` attribute content as a label before each cell’s content */
+    table td::before {
+        content: attr(data-title) ": ";
+        font-weight: bold;
+        color: #333;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        width: 40%; /* Adjust width to control space for the label */
+        display: inline-block; /* Ensures the label takes its own space */
+    }
+
+    /* Adjusts content alignment with added space */
+    table td {
+        padding-left: 45%; /* Space for label and gap between label and content */
+    }
+}

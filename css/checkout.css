@@ -1,0 +1,549 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Center the child elements horizontally */
+    align-items: stretch; /* Stretch the items vertically to be the same height */
+    padding-top: 150px;
+    padding-bottom: 150px;
+    gap: 50px; /* Adjust the gap between the product-container and information container */
+}
+
+.username-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    width: 600px;
+}
+
+.address-container {
+    width: 600px;
+}
+
+.state {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    width: 600px;
+}
+
+.phone{
+    width: 600px;
+}
+
+.right {
+    display: flex;
+}
+
+.information {
+    margin: 0px;
+}
+
+.information h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.custom {
+    padding: 10px 10px;
+    height: 60px;
+    width: 180px;
+    border-radius: 10px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.payment-container {
+    margin-top: 100px;
+}
+
+.product-container {
+    display: flex;
+    flex-direction: column; /* Make sure the products stack vertically */
+    margin-bottom: 200px;
+    width: 600px;
+}
+
+/* Container for ordered product */
+.ordered-product {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px; /* Ensure there’s space between multiple products */
+    width: 100%; /* Adjust width based on parent container */
+    box-sizing: border-box; /* Prevent width from overflowing */
+}
+
+/* Individual product details */
+.product-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    width: 100%; /* Allow it to expand dynamically */
+    box-sizing: border-box; /* Prevent overflow */
+}
+
+/* Image styles */
+.product-image img {
+    width: 90px;
+    border-radius: 8px;
+}
+
+/* Product information */
+.product-info {
+    margin-left: 20px;
+}
+
+.product-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-size {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Product price styles */
+.product-price {
+    font-weight: bold;
+}
+
+/* Subtotal styling */
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.discount-price {
+    display: none;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.vocher-eror{
+   display: none;
+   margin-top: 10px;
+}
+
+
+
+
+/* Payment container */
+.payment-container {
+    margin-top: 50px;
+}
+
+.payment-container h3 {
+    font-size: 20px;
+    margin: 0px;
+}
+
+.payment-container p {
+    color: #777;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Payment Method top */
+.payment-method-top {
+    display: flex;
+    align-items: center;
+    width: 600px;
+    height: 50px;
+    background-color: rgb(249, 249, 249);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: solid;
+    border-width: 1px;
+    border-color: #a0a0a0;
+}
+
+
+.checkbox {
+  appearance: none; /* Removes default styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  margin-left: 20px;
+}
+
+.checkbox:checked{
+    
+    background-color: rgb(24, 83, 172); 
+}
+
+.checkbox:checked::after {
+  content: '✔'; /* Checkmark character */
+  font-size: 12px;
+  color: white;
+  position: absolute;
+  top: 1px;
+  left: 4px;
+}
+
+.payment-method-name {
+    margin-left: 15px;
+}
+
+/* Touch-n-Go Container */
+#touch-n-go-container {
+    height: auto;
+    width: 600px;
+    background-color: rgb(249, 249, 249);
+    border-left: 1px solid #a0a0a0;
+    border-right: 1px solid #a0a0a0;
+    border-bottom: 1px solid #a0a0a0;
+}
+
+.qr-code {
+    width: 300px;
+    object-fit: contain;
+    margin-left: 150px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Payment Method mid */
+.payment-method-mid {
+    display: flex;
+    align-items: center;
+    width: 600px;
+    height: 50px;
+    background-color: rgb(249, 249, 249);
+    border-color: #a0a0a0;
+    border: solid;
+    border-width: 1px;
+    border-color: #a0a0a0;
+}
+
+/* Credit Card Container */
+#credit-card-container {
+    height: auto;
+    width: 600px;
+    background-color: rgb(249, 249, 249);
+    border-left: 1px solid #a0a0a0;
+    border-right: 1px solid #a0a0a0;
+    border-bottom: 1px solid #a0a0a0;
+}
+
+.card-number,
+.card-name {
+    padding: 20px;
+}
+
+.card-number input,
+.card-name input {
+    width: 530px;
+    height: 40px;
+    padding: 5px 10px;
+    border: solid;
+    border-width: 1px;
+    border-color: #a0a0a0;
+    border-radius: 5px;
+}
+
+.card-details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 20px;
+}
+
+.card-details input {
+    width: 245px;
+    height: 40px;
+    padding: 5px 10px;
+    border: solid;
+    border-width: 1px;
+    border-color: #a0a0a0;
+    border-radius: 5px;
+}
+
+/* Payment Method bottom */
+.payment-method-bottom {
+    display: flex;
+    align-items: center;
+    width: 600px;
+    height: 50px;
+    background-color: rgb(249, 249, 249);
+    border-color: #a0a0a0;
+    border: solid;
+    border-width: 1px;
+    border-color: #a0a0a0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 35px;
+}
+
+/* Pay Now Button */
+.pay-now {
+    margin-top: 40px;
+    width: 600px;
+    height: 50px;
+    background-color: rgb(26, 75, 166);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.15s, opacity 0.15s;
+}
+
+.pay-now:hover {
+    background-color: rgb(19, 63, 144);
+}
+
+.pay-now:active {
+    opacity: 0.8;
+}
+
+.voucher {
+    margin-top: 20px;
+    padding: 20px 100px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: auto;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+}
+
+
+
+
+
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 1201px) {
+    .container {
+        padding-top: 120px;  /* Adjust top padding */
+        gap: 20px;  /* Slightly reduced gap between elements */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align elements horizontally */
+
+    }
+
+    .username-container,
+    .state,
+    .address-container,
+    .phone,
+    .product-container {
+        width: 90%;  /* Increased width to use more of the screen */
+        gap: 12px;
+    }
+
+    .product-container {
+        margin-bottom: 20px;  /* Space between product containers */
+        padding: 25px;
+    }
+
+    .information {
+        padding: 20px;
+    }
+
+    .ordered-product {
+        padding: 15px;  /* Slightly more padding */
+        margin-bottom: 12px;  /* Adjust spacing between products */
+        box-sizing: border-box;
+    }
+
+    .product-details {
+        text-align: center;
+        padding: 8px 0;  /* Adjust padding */
+    }
+
+    .product-image img {
+        width: 60px;  /* Small but noticeable increase in image size */
+        height: auto;
+    }
+
+    .product-name,
+    .product-size,
+    .product-price {
+        font-size: 14px; /* Slightly larger font size */
+    }
+
+    .payment-container {
+        padding: 25px;
+        margin-top: 0px;
+    }
+
+    .payment-container p {
+        margin-bottom: 12px;
+    }
+
+    .payment-method-top,
+    .payment-method-mid,
+    .payment-method-bottom {
+        width: 90%;  /* Slightly more width */
+        flex-direction: row;  /* Keep stacking vertically */
+        margin-bottom: 12px;
+    }
+
+    .pay-now {
+        width: 85%; /* Make button slightly smaller */
+        height: 45px;  /* Slightly larger button */
+        font-size: 16px; /* Adjust font size for readability */
+        padding: 0 30px;
+        margin-left: 15px;
+    }
+
+    .qr-code {
+        width: 60%;  /* Adjust QR code size */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #touch-n-go-container,
+    #credit-card-container {
+        width: 90%;  /* More width to fill the screen */
+        padding: 14px;  /* Adjust padding for better spacing */
+    }
+
+    .card-number input,
+    .card-name input {
+        width: 100%;
+        padding: 12px 14px;  /* Slightly larger padding for ease of use */
+    }
+
+    .card-details input {
+        width: 100%;
+        padding: 12px 14px;
+    }
+
+    .card-number input,
+    .card-name input {
+        font-size: 15px;  /* Adjust font size for input fields */
+    }
+}
+
+
+
+/* For screens smaller than 480px */
+@media screen and (max-width: 480px) {
+    .container {
+        padding-top: 150px;  /* Reduced top padding to give more space */
+        gap: 15px;  /* Reduced gap between elements */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align elements horizontally */
+        width: 500px;
+        margin-left: 10px;
+    }
+
+    .username-container,
+    .state,
+    .address-container,
+    .phone,
+    .product-container {
+        width: 100%; /* Slightly increase width to fill the screen */
+        gap: 10px;
+    }
+
+    .product-container{
+        margin-bottom: 0;
+        padding: 20px;
+    }
+
+    .information{
+        padding: 20px;
+    }
+
+    .ordered-product {
+        padding: 12px;  /* Reduced padding for a more compact look */
+        margin-bottom: 8px;  /* Decrease spacing between products */
+        box-sizing: border-box;  /* Ensure padding doesn’t cause overflow */
+    }
+
+    .product-details {
+        text-align: center; /* Center the product details */
+        padding: 6px 0;  /* Reduce padding for a tighter layout */
+    }
+
+    .product-image img {
+        width: 50px; /* Further reduce image size for small screens */
+        height: auto;  /* Maintain aspect ratio */
+    }
+
+    .product-name,
+    .product-size,
+    .product-price {
+        font-size: 12px; /* Reduce font size for better readability on smaller screens */
+    }
+
+    .payment-container{
+        padding: 20px;
+        margin-top: 0px;
+    }
+
+    .payment-container p{
+        margin-bottom: 10px;
+    }
+
+    .payment-method-top,
+    .payment-method-mid,
+    .payment-method-bottom {
+        width: 95%;  /* Make payment containers responsive */
+        flex-direction: row;  /* Stack elements vertically */
+        margin-bottom: 10px;  /* Add space between payment method sections */
+    }
+
+    .pay-now {
+        width: 90%; /* Make the button full width */
+        height: 40px;  /* Reduce button height */
+        font-size: 14px; /* Adjust font size */
+        padding: 0 25px; /* Add padding for easier clicking */
+        margin-left: 20px;
+    }
+
+    .qr-code {
+        width: 70%;  /* Adjust the QR code size to fit smaller screens */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #touch-n-go-container,
+    #credit-card-container {
+        width: 95%;  /* Ensure containers take up most of the screen width */
+        padding: 12px;  /* Provide enough padding for inputs */
+    }
+
+    .card-number input,
+    .card-name input {
+        width: 100%;  /* Ensure inputs fill the container */
+        padding: 10px 12px;  /* Add padding for a better input experience */
+    }
+
+    .card-details input {
+        width: 100%;  /* Full width input fields */
+        padding: 10px 12px;  /* Adjust padding for readability */
+    }
+
+    /* Optional: Reduce the font size in the card number and name inputs */
+    .card-number input,
+    .card-name input {
+        font-size: 14px;  /* Reduce font size in input fields */
+    }
+
+    .voucher-container{
+        margin-left: 20px;
+    }
+}

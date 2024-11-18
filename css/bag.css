@@ -1,0 +1,393 @@
+.container{
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.bag{
+    margin-left: 50px;
+    padding: 5px 10px;
+    border-bottom: solid grey;
+    width: 90%;
+    border-width: 1px;
+}
+
+.bag h3{
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.total-item{
+    font-size: 24px;
+}
+
+.container-2 {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 50px;
+    width: 90%;
+    border-bottom: 1px solid grey;
+    padding-bottom: 20px;
+}
+
+.img {
+    flex-shrink: 0; /* Prevents the image from shrinking */
+    margin-right: 20px;
+}
+
+
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 300px; /* Limits the width for long product names */
+    margin-left: 20px;
+}
+
+.product-details p {
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds '...' for long text */
+}
+
+.quantity-container {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 5px;
+    max-width: 100px;
+    margin-top: 20px;
+}
+
+.i-quantity-button, .d-quantity-button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.quantity-button:focus {
+    outline: none;
+}
+
+.quantity-display {
+    font-size: 18px;
+    margin: 0 10px;
+    min-width: 20px;
+    text-align: center;
+}
+
+.container-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: auto; /* Aligns the price and delete button to the far right */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.price {
+    font-size: 18px;
+    margin-bottom: auto; /* Pushes the price to the top */
+}
+
+.delete {
+    margin-top: 40px; /* Adds space between the price and delete button */
+    margin-left: auto;
+}
+
+.delete-btn {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.messag{
+    font-size: 10px;
+    font-weight: 100;
+}
+
+.total-container {
+    margin-top: 50px;
+    margin-right: 75px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    align-items: right; 
+}
+
+.sub-total,
+.shiping,
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px; /* Reduce vertical space between items */
+    padding: 0 20px; /* Reduce padding */
+}
+
+.sub-total h3,
+.shiping h3,
+.total h3 {
+    font-size: 26px;
+    margin: 0;
+    width: 100px; /* Adjust width as needed */
+}
+
+.sub-total span,
+.shiping span,
+.total span {
+    font-size: 26px;
+    text-align: right;
+    width: 150px; /* Adjust width to bring values closer */
+    margin-left: 0; /* Remove additional margin */
+}
+
+
+
+.checkout{
+    display: flex; /* Use flexbox layout */
+    justify-content: flex-end;
+    margin-top: 50px;
+    margin-right: 80px;
+    margin-bottom: 50px;
+}
+
+.checkout-button{
+    padding: 12px 15px;
+    border: none;
+    color: white;
+    background-color: rgb(17, 45, 155);
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.15s, opacity 0.15s;
+
+}
+
+.checkout-button:hover{
+    background-color: rgb(16, 16, 126);
+}
+
+.checkout-button:active{
+    opacity: 0.8;
+}
+
+.empty-bag{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Mobile view for 768px */
+@media (max-width: 768px) {
+    .container {
+        width: 600px;
+        padding-top: 100px;
+    }
+
+    .bag {
+        margin-left: 20px;
+        width: 85%;
+        padding: 5px 8px;
+    }
+
+    .bag h3 {
+        font-size: 28px;
+    }
+
+    .total-item {
+        font-size: 20px;
+    }
+
+    .container-2 {
+        margin-left: 20px;
+        width: 100%;
+        margin-top: 20px;
+        padding-bottom: 15px;
+    }
+
+    .img {
+
+        margin-right: 15px;
+    }
+
+    .product-details {
+        max-width: 200px;
+        margin-left: 10px;
+    }
+
+    .product-details p {
+        font-size: 16px;
+    }
+
+    .quantity-container {
+        max-width: 110px;
+        padding: 4px;
+    }
+
+    .i-quantity-button, .d-quantity-button {
+        font-size: 16px;
+    }
+
+    .quantity-display {
+        font-size: 16px;
+    }
+
+    .container-3 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    .delete {
+        margin-top: 20px;
+    }
+
+    .messag {
+        font-size: 8px;
+    }
+
+    .total-container {
+        width: 100%;
+        margin-right: 20px;
+        align-items: flex-end;
+    }
+
+    .sub-total h3, .shiping h3, .total h3 {
+        font-size: 22px;
+    }
+
+    .sub-total span, .shiping span, .total span {
+        font-size: 22px;
+    }
+
+    .checkout {
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    .checkout-button {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+}
+
+/* Mobile view for 480px */
+@media (max-width: 480px) {
+    .container {
+        width: 500px;
+        padding-top: 180px;
+    }
+
+    .bag {
+        margin-left: 10px;
+        width: 90%;
+        padding: 5px;
+    }
+
+    .bag h3 {
+        font-size: 24px;
+    }
+
+    .total-item {
+        font-size: 18px;
+    }
+
+    .container-2 {
+        margin-left: 10px;
+        width: 100%;
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+    .img {
+        margin-right: 10px;
+    }
+
+ 
+
+    .product-details {
+        max-width: 150px;
+        margin-left: 5px;
+    }
+
+    .product-details p {
+        font-size: 14px;
+    }
+
+    .quantity-container {
+        max-width: 100px;
+        padding: 3px;
+    }
+
+    .i-quantity-button, .d-quantity-button {
+        font-size: 14px;
+    }
+
+    .quantity-display {
+        font-size: 14px;
+    }
+
+    .container-3 {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
+    .delete {
+        margin-top: 15px;
+    }
+
+    .messag {
+        font-size: 7px;
+    }
+
+    .total-container {
+        width: 100%;
+        align-items: flex-end;
+        margin-right: 10px;
+    }
+
+    .sub-total h3, .shiping h3, .total h3 {
+        font-size: 20px;
+    }
+
+    .sub-total span, .shiping span, .total span {
+        font-size: 20px;
+    }
+
+    .checkout {
+        justify-content: center;
+        margin-right: 0;
+        margin-left: 350px;
+    }
+
+    .checkout-button {
+        padding: 12px 10px;
+        font-size: 12px;
+    }
+}
+
+   
+
+
+
+
+
+
+
+
+
+

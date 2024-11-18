@@ -1,0 +1,159 @@
+
+
+.container{
+  font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    padding-top: 180px;
+}
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+input{
+  width: 96%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.voucher-table {
+    margin-top: 40px;
+    width: 80%;
+    max-width: 900px;
+}
+
+.voucher-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.voucher-table th, .voucher-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.voucher-table th {
+    background-color: #f2f2f2;
+}
+
+.voucher-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.voucher-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.voucher-table a {
+    color: #FF4C4C; /* Red color for delete link */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.voucher-table a:hover {
+    color: #D03C3C; /* Darker red when hovered */
+     text-decoration: underline;
+}
+
+@media (max-width: 468px) {
+    .container {
+        padding: 10px;
+        padding-top: 150px;
+    }
+
+    .form-container {
+        padding: 15px;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    label {
+        font-size: 13px;
+    }
+
+    select, input {
+        width: 100%; /* Full width for smaller screens */
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .voucher-table {
+        margin-top: 20px;
+        width: 100%; /* Adjust to full width */
+    }
+
+    .voucher-table table {
+        font-size: 12px;
+    }
+
+    .voucher-table th, .voucher-table td {
+        padding: 8px; /* Reduce padding */
+        font-size: 12px; /* Adjust font size for readability */
+    }
+
+    .voucher-table th {
+        font-size: 13px;
+    }
+
+    .voucher-table a {
+        font-size: 12px;
+    }
+}
+
