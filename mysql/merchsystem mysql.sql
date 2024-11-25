@@ -21,6 +21,10 @@ SET time_zone = "+00:00";
 -- Database: `merchsystem`
 --
 
+CREATE database if not exists merchsystem;
+
+use merchsystem;
+
 -- --------------------------------------------------------
 
 --
