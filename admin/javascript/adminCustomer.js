@@ -24,7 +24,7 @@ async function fetchCustomers() {
                     <td data-title="Customer Name">${customer.username}</td>
                     <td data-title="Email Address">${customer.email}</td>
                     
-                <td data-title="Verify">${veriyfy}</td>
+                    <td data-title="Verify">${veriyfy}</td>
 
                 
 

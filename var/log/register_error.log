@@ -1,0 +1,2 @@
+Registration Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FORM users WHERE email_address = ?' at line 1
+Registration Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FORM users WHERE email_address = ?' at line 1

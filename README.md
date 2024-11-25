@@ -1,4 +1,4 @@
-# <img src="https://github.com/user-attachments/assets/df63b110-0841-4858-8c37-8975d1ae9f44" width="80" /> Merchsystem  
+# <img src="https://github.com/user-attachments/assets/df63b110-0841-4858-8c37-8975d1ae9f44" width="80" /> E-Commerce Merchandise Platform - Merchsystem  
 
 
 
@@ -8,7 +8,7 @@ Whether you're a gamer searching for premium merchandise or a developer curious 
 
 ---
 
-## 🛠️ Features  
+## 🛠️ Features 
 
 ### User-Centric Features  
 - **User Authentication**: Secure login and registration system with reCAPTCHA to prevent bots.  
@@ -114,8 +114,18 @@ try {
 This project is licensed under the [MIT License](LICENSE).  
 
 ---
+## 👥 Contributors  
+
+We are a team of passionate developers who collaborated on this project:  
+
+| Name             | GitHub Profile                       |
+|------------------|--------------------------------------|
+| **Leong Hoong Kai** | [@lhk01](https://github.com/lhk01) |
+| **Chew Zhi Boon**      | [@Rey-3](https://github.com/Rey-3) |
+| **Goay Wei Jun**    | [@Blackmanchoco](https://github.com/Blackmanchoco) |
+
+---
 
 ## 🌟 Acknowledgments  
 
 Special thanks to the developers and contributors of open-source libraries, especially PHPMailer, for making this project possible!  
-
