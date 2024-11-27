@@ -48,7 +48,7 @@
 
 
   <div class = "container"> 
-    <div clas = "shop-all-container">
+    <div class = "shop-all-container">
       <div class = "title">
         <h2>Shop All</h2>
         <p>Discover More Amazing Merchandise</p>
