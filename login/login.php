@@ -55,7 +55,7 @@
 
             <!-- Recaptcha -->
             <div class="recaptcha"> 
-              <div class="g-recaptcha" data-sitekey="6LfAl0UqAAAAAJG3c7wwQKGFkU7eCUhWvkMGnHOL" data-callback="enableSubmitbtn"></div>
+              <div class="g-recaptcha" data-sitekey="6LdPJ4oqAAAAACRyD8uXnCmNqTUwOYUAz5-9AOaB" data-callback="enableSubmitbtn"></div>
             </div>
           </form>
 
