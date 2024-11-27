@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['email_or_username']) && isset($_POST['password']) && isset($_POST['g-recaptcha-response'])) {
 
         // Verify reCAPTCHA
-        $secretKey = "6LfAl0UqAAAAAAN-xWgbIAtqSRJ00VZ1Bq6_Ik55"; // Your secret key
+        $secretKey = "6LdPJ4oqAAAAABdp6aMHkbsN1wElXPPhtbX_VgN-"; // Your secret key
         $recaptchaResponse = $_POST['g-recaptcha-response'];
 
         // Make a request to the Google reCAPTCHA API
