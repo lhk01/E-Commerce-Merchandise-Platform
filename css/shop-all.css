@@ -22,9 +22,7 @@ body {
 }
 
 .shop-all-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 60px;
 }
 
 .title {
@@ -243,13 +241,6 @@ body {
     width: 600px;
     margin: auto; /* Center the container */
     padding-top: 1000px;
-  }
-
-  .shop-all-container {
-    display: flex;
-    flex-direction: row; /* Display items in a row */
-    gap: 10px; /* Space between items */
-    flex-wrap: wrap; /* Allow wrapping to fit items in a row */
   }
 
   .title h2 {
