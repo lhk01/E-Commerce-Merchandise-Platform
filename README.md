@@ -38,26 +38,20 @@ Follow these steps to set up Merchsystem on your local machine:
 
 ### Prerequisites  
 - PHP (7.4 or later)  
-- Composer  
 - XAMPP  
 
 ### Steps  
 
 1. **Clone the Repository**  
    ```bash  
-   git clone https://github.com/lhk01/E-Commerce-Merchandise-Platform.git  
+   git clone https://github.com/lhk01/E-Commerce-Merchandise-Platform.git
+   ```
 
-2. **Install Dependencies**  
-   Use Composer to install the required PHP packages, including PHPMailer.  
-   ```bash  
-   composer require phpmailer/phpmailer  
-   ```  
-
-3. **Configure Environment**  
+2. **Configure Environment**  
    - Set up your database in XAMPP.  
    - Update the database credentials in the project configuration file (e.g., `config.php`).  
 
-4. **Run the Application**  
+3. **Run the Application**  
    Start XAMPP, ensure Apache and MySQL are running, and open the project in your browser (e.g., `http://localhost/merchsystem`).  
 
 ---
@@ -66,19 +60,16 @@ Follow these steps to set up Merchsystem on your local machine:
 
 This project utilizes **PHPMailer** for email functionalities such as sending OTPs and transactional messages.  
 
-### Install PHPMailer  
-Run the following Composer command to include PHPMailer in your project:  
-```bash  
-composer require phpmailer/phpmailer  
-```  
-
 ### Example Code  
-Here’s an example of how to use PHPMailer in Merchsystem:  
+Here’s an example of how to use PHPMailer:  
 ```php  
-use PHPMailer\PHPMailer\PHPMailer;  
-use PHPMailer\PHPMailer\Exception;  
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
 
-require 'vendor/autoload.php';  
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';  
 
 $mail = new PHPMailer(true);  
 
@@ -86,12 +77,12 @@ try {
     $mail->isSMTP();  
     $mail->Host       = 'smtp.example.com';  
     $mail->SMTPAuth   = true;  
-    $mail->Username   = 'your-email@example.com';  //your email name
-    $mail->Password   = 'your-password';  // your email app password
+    $mail->Username   = 'your-email@example.com';  //Replace with your email 
+    $mail->Password   = 'your-password';  //Replace with your email app password (16 digits)
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;  
     $mail->Port       = 587;  
 
-    $mail->setFrom('your-email@example.com', 'Merchsystem');  
+    $mail->setFrom('your-email@example.com', 'Merchsystem');  //Replace with your email 
     $mail->addAddress('recipient@example.com');  
 
     $mail->isHTML(true);  
