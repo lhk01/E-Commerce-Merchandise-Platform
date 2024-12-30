@@ -59,9 +59,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->bind_param("sss", $token_hash, $expiry, $email);
             $stmt->execute();
             
-             // Send the reset email to the user with the token link
+             // First, get the current domain and protocol
+            $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://';
+            $domain = $_SERVER['HTTP_HOST'];
+            $base_url = $protocol . $domain;
+
+            // Send the reset email with absolute URL
             mailer($email, $title, "Password Reset", 
-            "To Reset Password <br><br>Click <a href='http://localhost/merchsystem-final-draft/forgot-password/reset-password.php?token=$token'>here</a> 
+            "To Reset Password <br><br>Click <a href='" . $base_url . "/forgot-password/reset-password.php?token=$token'>here</a> 
             to reset your password.", $time);
 
             redirect("../forgot-password/send-password-reset.php");

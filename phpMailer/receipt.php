@@ -1,8 +1,14 @@
 <?php
-  use PHPMailer\PHPMailer\PHPMailer;
-  use PHPMailer\PHPMailer\Exception;
+// Import PHPMailer classes into the global namespace
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
 
-  require 'vendor/autoload.php';
+// Include PHPMailer files manually
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
   function mailerReceipt($to, $title, $subject, $items,$total,$payment_method,$transaction_id,$date,$discount){
     $mail = new PHPMailer(true);
 
@@ -10,12 +16,12 @@
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'merchsystem@gmail.com'; // Your email
-        $mail->Password = 'fhccajpanmsuhugw';   // Your app password
+        $mail->Username = 'your_email@gmail.com'; // Your email
+        $mail->Password = 'your_app_password';   // Your email app password (16 digits)
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
 
-        $mail->setFrom('merchsystem@gmail.com', $title);
+        $mail->setFrom('your_email@gmail.com', $title); // Your email
         $mail->addAddress($to, 'User');
 
         $mail->isHTML(true);
@@ -56,19 +62,20 @@
                         ";    
 
             if($item['category'] !==  'Apparel'){
-                 $htmlBody .= "<td style=\"padding: 10px; font-size: 14px; color: #555; text-align: center;\">{$item['quantity']}</td>";
-            }else{
-                if($item['size_m'] !== null){
-                     $htmlBody .= "<td style=\"padding: 10px; font-size: 14px; color: #555; text-align: center;\">{$item['size_m']}</td>";
+                $htmlBody .= "<td style=\"padding: 10px; font-size: 14px; color: #555; text-align: center;\">{$item['quantity']}</td>";
+            } else {
+                $sizes = [];
+                if($item['size_m'] !== null && $item['size_m'] > 0) {
+                    $sizes[] = "M: {$item['size_m']}";
                 }
-
-                if($item['size_l'] !== null){
-                     $htmlBody .= "<td style=\"padding: 10px; font-size: 14px; color: #555; text-align: center;\">{$item['size_l']}</td>";
+                if($item['size_l'] !== null && $item['size_l'] > 0) {
+                    $sizes[] = "L: {$item['size_l']}";
                 }
-
-                if($item['size_xl'] !== null){
-                     $htmlBody .= "<td style=\"padding: 10px; font-size: 14px; color: #555; text-align: center;\">{$item['size_xl']}</td>";
+                if($item['size_xl'] !== null && $item['size_xl'] > 0) {
+                    $sizes[] = "XL: {$item['size_xl']}";
                 }
+                $sizeText = implode(', ', $sizes);
+                $htmlBody .= "<td style=\"padding: 10px; font-size: 14px; color: #555; text-align: center;\">{$sizeText}</td>";
             }
 
 
@@ -114,7 +121,7 @@
 
                 <!-- Footer section -->
                 <div style=\"border-top: 1px solid #ccc; margin-top: 40px; padding-top: 10px;\">
-                    <p style=\"font-size: 13px; color: #555; margin: 5px 0;\">If you have any questions about your purchase, contact us at <a href=\"mailto:merchsystem@gmail.com\" style=\"color: #007bff;\">merchsystem@gmail.com</a>.</p>
+                    <p style=\"font-size: 13px; color: #555; margin: 5px 0;\">If you have any questions about your purchase, contact us at <a href=\"mailto:ecmp.merchsystem@gmail.com\" style=\"color: #007bff;\">ecmp.merchsystem@gmail.com</a>.</p>
                     <p style=\"font-size: 13px; color: #555; margin: 5px 0;\">This is an automated message; please do not reply.</p>
                 </div>
 

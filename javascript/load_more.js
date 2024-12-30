@@ -7,6 +7,17 @@ document.addEventListener("DOMContentLoaded", function() {
     let sortBy = ""; // Store the selected sorting option (high-to-low or low-to-high)
     let availability = []; // Store the selected availability filters
 
+    // Handle initial category if provided
+    if (typeof initialCategory !== 'undefined' && initialCategory) {
+        // Find and check the corresponding checkbox
+        const categoryCheckbox = document.getElementById(`category-${initialCategory}`);
+        if (categoryCheckbox) {
+            categoryCheckbox.checked = true;
+            // Update categories array
+            categories = [initialCategory];
+        }
+    }
+
     // Set a timeout to fix the issue with the button appearing first
     setTimeout(() => {
         loadMoreBtn.style.display = "inline";
@@ -61,7 +72,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (response.trim() === "") {  // Check if empty
                     loadMoreBtn.style.display = "none"; // No more products, hide the button
                 } else {
-                    productContainer.innerHTML += response; // Append the newly loaded products to the container
+                    if (offset === 0) {
+                        productContainer.innerHTML = response;
+                    } else {
+                        productContainer.innerHTML += response;
+                    }
                     offset += limit; // Update the offset variable
                 }
             }
@@ -82,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
         xhr.send(params);
     }
 
-    // Load initial items
+    // Initial load
     loadProducts();
 
     // Event listener for the Load More button

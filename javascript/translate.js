@@ -30,12 +30,17 @@ const restoreOriginalText = () => {
 // Function to translate content
 const translateContent = async (targetLanguage) => {
     if (targetLanguage === "en") {
-        restoreOriginalText(); // Restore original text if English is selected
+        restoreOriginalText();
         return;
     }
 
     const textNodes = getTextNodes(document.body);
-    const textsToTranslate = textNodes.map(node => node.nodeValue);
+    const textsToTranslate = textNodes.map(node => node.nodeValue.trim()).filter(text => text.length > 0);
+
+    if (textsToTranslate.length === 0) {
+        console.log('No text found to translate');
+        return;
+    }
 
     try {
         const response = await fetch(`https://translation.googleapis.com/language/translate/v2?key=${apiKey}`, {
@@ -44,18 +49,35 @@ const translateContent = async (targetLanguage) => {
             body: JSON.stringify({
                 q: textsToTranslate,
                 target: targetLanguage,
+                format: "text"
             }),
         });
 
-        const data = await response.json();
-        const translations = data.data.translations;
+        if (!response.ok) {
+            const errorData = await response.json();
+            console.error("Translation API error:", errorData);
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
 
+        const data = await response.json();
+        
+        if (!data.data || !data.data.translations) {
+            console.error("Unexpected API response format:", data);
+            return;
+        }
+
+        const translations = data.data.translations;
+        
         // Replace text nodes with their translations
         translations.forEach((translation, index) => {
-            textNodes[index].nodeValue = translation.translatedText;
+            if (textNodes[index] && translation.translatedText) {
+                textNodes[index].nodeValue = translation.translatedText;
+            }
         });
     } catch (error) {
-        console.error("Error during translation:", error);
+        console.error("Translation error:", error);
+        // Optionally show user-friendly error message
+        alert("Sorry, there was an error translating the content. Please try again later.");
     }
 };
 
@@ -76,8 +98,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (languageSelector) {
         languageSelector.addEventListener("change", () => {
             const targetLanguage = languageSelector.value;
-            localStorage.setItem("preferredLanguage", targetLanguage); // Save the preference
-            translateContent(targetLanguage); // Translate content
+            console.log('Changing language to:', targetLanguage);
+            localStorage.setItem("preferredLanguage", targetLanguage);
+            translateContent(targetLanguage).catch(error => {
+                console.error('Translation failed:', error);
+            });
         });
     }
 });

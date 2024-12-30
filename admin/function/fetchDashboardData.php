@@ -58,18 +58,21 @@ $data = [
 ];
 
 // Fetch recent orders for the current month
- $recentOrdersSql = "
-        SELECT 
-            orders.order_id, 
-            users.username, 
-            orders.order_date, 
-            orders.total_price, 
-            orders.order_status 
-        FROM 
-            orders 
-        JOIN 
-            users ON orders.user_id = users.id
-    ";
+$recentOrdersSql = "
+    SELECT 
+        orders.order_id, 
+        users.username, 
+        orders.order_date, 
+        orders.total_price, 
+        orders.order_status 
+    FROM 
+        orders 
+    JOIN 
+        users ON orders.user_id = users.id
+    ORDER BY 
+        orders.order_date DESC
+    LIMIT 5
+";
 
 $recentOrdersResult = $mysqli->query($recentOrdersSql);
 

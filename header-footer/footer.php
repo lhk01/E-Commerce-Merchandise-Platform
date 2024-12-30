@@ -56,9 +56,9 @@
                 <option value="en">English</option>
                 <option value="zh">Chinese (Simplified)</option>
                 <option value="zh_TW">Traditional Chinese</option>
-                <option value="ms">Malay</option>hi-IN
-                <option value="hi-IN">Hindi </option>
-                <option value="fr">French </option>
+                <option value="ms">Malay</option>
+                <option value="hi-IN">Hindi</option>
+                <option value="fr">French</option>
             </select>
             
         </div>

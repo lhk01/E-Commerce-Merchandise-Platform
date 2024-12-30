@@ -103,7 +103,7 @@
 
       <div class="category-p">
         <h2>Apparel</h2>
-        <a href="product.php">View More</a>
+        <a href="product.php?category=apparel">View More</a>
       </div>
 
       <div class="product-container">
@@ -157,7 +157,7 @@
 
       <div class="category-p">
           <h2>Plush</h2>
-          <a href="product.php">View More</a>
+          <a href="product.php?category=plush">View More</a>
       </div>
 
       <div class="product-container">
@@ -211,7 +211,7 @@
 
       <div class="category-p">
           <h2>Accessory</h2>
-          <a href="product.php">View More</a>
+          <a href="product.php?category=accessory">View More</a>
       </div>
 
       <div class="product-container">

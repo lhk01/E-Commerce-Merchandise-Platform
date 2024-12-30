@@ -121,7 +121,7 @@
                             
                                 <h3>Email</h3>
 
-                                    <p>merchsystem@gmail.com</p>
+                                    <p>ecmp.merchsystem@gmail.com</p>
 
                                 <span class="response-time">We respond within 24 hours</span>
 

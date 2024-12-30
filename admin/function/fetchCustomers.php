@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     if ($customerId) {
         // Prepare and execute the delete statement
-        $stmt = $mysqli->prepare("DELETE FROM customers WHERE user_id = ?");
+        $stmt = $mysqli->prepare("DELETE FROM users WHERE user_id = ?");
         $stmt->bind_param("i", $customerId); // "i" specifies the variable type is integer
         $stmt->execute();
 

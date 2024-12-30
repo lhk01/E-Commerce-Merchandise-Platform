@@ -15,9 +15,12 @@
   <title>Apparel</title>
 </head>
 <body>
-  
-
-  <div class = "container">
+    <?php
+    // Get the category from URL parameter
+    $initialCategory = isset($_GET['category']) ? $_GET['category'] : '';
+    ?>
+    
+    <div class = "container">
     <!-- Filter container -->
     <div >
       <div class = "filter-container" id = "filter-container">
@@ -103,6 +106,10 @@
     </div>
   </div>
   
+  <script>
+  // Add this before your existing DOMContentLoaded event
+  const initialCategory = '<?php echo $initialCategory; ?>';
+  </script>
   <script src="../javascript/load_more.js"></script>
   <script>
    function nextImage(button) {

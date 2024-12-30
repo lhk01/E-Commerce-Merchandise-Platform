@@ -1,8 +1,14 @@
 <?php
-  use PHPMailer\PHPMailer\PHPMailer;
-  use PHPMailer\PHPMailer\Exception;
+// Import PHPMailer classes into the global namespace
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
 
-  require 'vendor/autoload.php';
+// Include PHPMailer files manually
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
   function mailerDelivered($to, $title, $subject, $name,$order_id,$address){
     $mail = new PHPMailer(true);
 
@@ -10,12 +16,12 @@
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'merchsystem@gmail.com'; // Your email
-        $mail->Password = 'fhccajpanmsuhugw';   // Your app password
+        $mail->Username = 'your_email@gmail.com'; // Your email
+        $mail->Password = 'your_app_password';   // Your email app password (16 digits)
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
 
-        $mail->setFrom('merchsystem@gmail.com', $title);
+        $mail->setFrom('your_email@gmail.com', $title); // Your email
         $mail->addAddress($to, 'User');
 
         $mail->isHTML(true);

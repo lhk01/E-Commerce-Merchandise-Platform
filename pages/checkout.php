@@ -108,6 +108,11 @@
             $order_stmt->execute();
             $order_id = $mysqli->insert_id;
             
+            $size_M = null;
+            $size_L = null;
+            $size_XL = null;
+            $items = [];
+
             foreach ($cart_items as $row) {
                 if ($row['categories'] === 'Apparel') {
                     $sizes = [
@@ -186,9 +191,9 @@
                         'amount' => $row['price'],
                         'quantity' => $row['quantity'],
                         'category' => $row['categories'],
-                        'size_m' => $size_M,
-                        'size_l' => $size_L,
-                        'size_xl' => $size_XL
+                        'size_m' => null,
+                        'size_l' => null,
+                        'size_xl' => null
                     ];
                 }
             }
@@ -245,7 +250,17 @@
             // redirect("upload-prooft-image.php?order_id=$order_id");
 
         }else{
-            echo "ur mom";
+            $error_messages = [];
+            if(empty($first_name)) $error_messages[] = "First name is required";
+            if(empty($last_name)) $error_messages[] = "Last name is required";
+            if(empty($address)) $error_messages[] = "Address is required";
+            if(empty($state)) $error_messages[] = "State is required";
+            if(empty($city)) $error_messages[] = "City is required";
+            if(empty($zip_code)) $error_messages[] = "Zip code is required";
+            if(empty($phone_number)) $error_messages[] = "Phone number is required";
+            
+            echo "<script>alert('Please fill in all required fields:\\n- " . 
+                 implode("\\n- ", $error_messages) . "');</script>";
         }    
     }
 ?>
@@ -440,8 +455,6 @@
                     <input class = "checkbox" type="checkbox" id="touch-n-go" name="payment-method" value="Touch and Go" onclick="handleCheckboxClick(this)">
                     <label class = "payment-method-name" for="touch-n-go">Touch'n Go</label><br>
                 </div>
-
-
 
                 <div class = "payment-method-mid">
                     <input class = "checkbox" type="checkbox" id="credit-card" name="payment-method" value="Credit Card" onclick="handleCheckboxClick(this)">

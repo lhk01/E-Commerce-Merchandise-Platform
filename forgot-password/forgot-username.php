@@ -7,7 +7,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reset Password</title>
+  <title>Reset Username</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="../css/input-container.css">
@@ -23,7 +23,7 @@
     </button>
   </a>
 
-   <!-- Main container for the reset password page -->
+   <!-- Main container for the reset username page -->
   <div class="container">
     <!-- Forgot Password container -->
     <div class = "forgot-password-container">
